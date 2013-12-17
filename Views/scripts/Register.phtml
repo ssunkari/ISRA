@@ -1,0 +1,1010 @@
+<?php require('Views/header_'.$view->headerTitle.'.phtml');?>
+
+<style type="text/css">
+a {
+	color: #FFF;
+}
+fieldset
+{
+	width: 556px;
+	margin: 3px 3px 8px 3px;
+	padding: 5px;
+	padding-left: 10px;
+	text-align: center;
+	border: solid 1px #dadfe0;
+	background: url(images/grey_grdn_bg.jpg) repeat-x;
+	font-size: 11px;
+}
+.im {
+	position: relative;
+}
+h3.heading_red {
+	color: #b60000;
+	font-weight: normal;
+	font-size: 11px;
+}
+.inputForm {
+	color:#666;
+	font-size:11px;
+	padding: 1px;
+}
+.inputReg {
+	padding: 0px;
+	color:#666;
+	font-size:11px;
+	border: solid 1px #bbb;
+	padding: 2px;
+}
+h3 {
+	margin:10px 0px 0px 5px;
+	font:bold 11px Arial, Helvetica, sans-serif;
+}
+fieldset legend
+{
+	padding: 5px 10px;
+	font-weight: bold;
+	
+}
+body
+{
+	margin: 0px;
+	padding: 0px;
+	color: #504E4E;
+	font: 11px Arial,Helvetica,sans-serif;
+	font-size: 11px;
+}
+div.formRow
+{
+	padding: 3px 0px 3px 10px;
+	clear: both;
+}
+div.fieldContainer
+{
+	clear: none;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+div.fieldLabel
+{
+	float: left;
+	clear: right;	
+}
+div.field
+{
+	float: left;
+	clear: left;
+}
+div.field input
+{
+	width: 258px;
+	font-size:11px;
+	color:#666;
+}
+div.field input.big
+{
+	width: 500px;
+}
+div.field select
+{
+	width: 258px;
+}
+div.fieldLabel span.error
+{
+	color: #f00;
+	background-image: url(/images/err.gif);
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	width: 25px !important;
+	text-indent: -9999px;
+	height: 15px !important;
+}
+div.mainForm label
+{
+	width: auto;
+	text-align: left;
+	margin-right: 3px;
+}
+.fl {
+	width: 250px;
+	float: left;
+	overflow: hidden;
+}
+.sel{color:#504E4E;margin: 0;width: 150px;}
+a.closeLink{text-indent:-9999px;background-image:url('/images/_crossRed16.gif') no-repeat scroll right middle;height:16px;width:16px;}
+.ckbBx input[type="checkbox"] {
+	margin-right: 3px;
+}
+.rcbItem  input[type="checkbox"] {
+	margin-right: 3px;
+	margin-bottom:5px;
+	font-size:11px !important;
+}
+.rcbHovered  input[type="checkbox"] {
+	margin-right: 3px;
+	margin-bottom:5px;
+	font-size:11px !important;
+}
+
+.rcbList li.rcbItem {
+	font-size:11px !important;
+}
+
+.rcbList li.rcbHovered {
+	font-size:11px !important;
+}
+.btn {
+	padding: 5px 10px;
+	border: solid 1px #C7C7C7;
+	background: #E7E7E7;
+	margin-bottom: 10px;
+}
+</style>
+
+<!-- Content Start From Here -->
+<div id="content_container">
+    
+    <!-- Liner Background Start From Here -->
+    <div id="liner_bg_container">
+        <div class="liner_bg">
+            <div class="breadcrumb"><a href="index.html" title="Home">Home</a>><span>Free Registration</span></div>
+            <div class="img"><img src="images/free_img.jpg" width="301" height="22" alt="all are services are FREE of charge" align="right" /></div>
+        </div>
+    </div>
+    <!-- Liner Background End Here -->
+    
+    <div id="content">
+        
+        <!-- Left Content Start From Here -->
+        <div id="lt_container">
+            
+            <!-- Content Start From Here -->
+            <div class="cnt_txt">
+                <h3 class="heading">Free Registration</h3>
+                
+   				<table border="0" cellpadding="5" cellspacing="0" width="556">
+                <tr>  
+                <td>
+                <form method="post" action="<?php echo $_SERVER["PHP_SELF"]?>" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ScriptManager1_TSM" id="ScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTkyODE5OTA4NA8WBh4IdmlzaXRfZmsFATAeA2tleWUeBG1vZGUC8QYWAgIBD2QWBAIFDw8WAh4XRW5hYmxlQWpheFNraW5SZW5kZXJpbmdoZGQCBw9kFhICAQ8QDxYGHg1EYXRhVGV4dEZpZWxkBQV2YWx1ZR4ORGF0YVZhbHVlRmllbGQFAmlkHgtfIURhdGFCb3VuZGdkEBUGAk1yA01ycwRNaXNzAk1zAkRyBFByb2YVBgI3MQI3MgI3MwI3NAI3NQI3NhQrAwZnZ2dnZ2dkZAIbDxAPFgIfBmdkEBUlCi0tc2VsZWN0LS0ZQW5kYW1hbiAmIE5pY29iYXIgSXNsYW5kcw5BbmRocmEgUHJhZGVzaBFBcnVuYWNoYWwgUHJhZGVzaAVBc3NhbQVCaWhhcgpDaGFuZGlnYXJoDENoaGF0dGlzZ2FyaBZEYWRyYSBhbmQgTmFnYXIgSGF2ZWxpDURhbWFuIGFuZCBEaXUFRGVsaGkDR29hB0d1amFyYXQHSGFyeWFuYRBIaW1hY2hhbCBQcmFkZXNoEUphbW11IGFuZCBLYXNobWlyCkpoYXJraGFuZCAKS2FybmF0YWthIAZLZXJhbGELTGFrc2hhZHdlZXAOTWFkaHlhIFByYWRlc2gLTWFoYXJhc2h0cmEHTWFuaXB1cglNZWdoYWxheWEHTWl6b3JhbQhOYWdhbGFuZAlOZXcgRGVsaGkGT3Jpc3NhC1BvbmRpY2hlcnJ5BlB1bmphYglSYWphc3RoYW4GU2lra2ltClRhbWlsIE5hZHUHVHJpcHVyYQ1VdHRhciBQcmFkZXNoC1V0dGFyYWtoYW5kC1dlc3QgQmVuZ2FsFSUBMAIzMwE1ATYBNwE4ATMBOQIzNAIzNQE0AjEwAjExAjEyAjEzAjE0AjE1AjE2AjE3AjM2AjE4AjE5AjIwAjIxAjIyAjIzAjM4AjI0AjM3AjI1AjI2AjI3AjI4AjI5AjMxAjMwAjMyFCsDJWdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAIdD2QWAgIFDxAPFgYfBAUEbmFtZR8FBQJpZB8GZ2QQFQEFSW5kaWEVAQMxMTIUKwMBZxYBZmQCJQ9kFgICAQ9kFgICAw8QDxYGHwQFBG5hbWUfBQUCaWQfBmcWAh4Ib25jaGFuZ2UFCnNldGNpdHkoKTsQFRIILXNlbGVjdC0IYW1yaXRzYXIJYmFuZ2Fsb3JlCmNoYW5kaWdhcmgHY2hlbm5haQZjb2NoaW4KY29pbWJhdG9yZRFkZWxoaSBbcGl0YW1wdXJhXQ1kZWxoaSBbc291dGhdCWh5ZGVyYWJhZAZqYWlwdXIKamFsbGFuZGhhcghrb3R0YXlhbQhsdWRoaWFuYQltZWxib3VybmUGbXlzb3JlB3BhdGlhbGEPdGlydWNoaXJhcHBhbGxpFRIBMAE2AjI4ATECMjMCMjUCMjEBNAIyNwIzMAIzNgE3AjI2ATUBMgIyOQEzAjIyFCsDEmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAicPZBYCZg9kFgICAQ8QDxYGHwQFBG5hbWUfBQUCaWQfBmdkEBUFCUF1c3RyYWxpYQZDYW5hZGELTmV3IFplYWxhbmQOVW5pdGVkIEtpbmdkb20DVVNBFQUCMTICMzkDMTgxAzI0MAMyNDIUKwMFZ2dnZ2cWAGQCKQ9kFgICAQ8UKwACDxYMHwQFBG5hbWUfBQUCaWQfBmcfA2geE2NhY2hlZFNlbGVjdGVkVmFsdWVkHgRUZXh0ZWQPFCsABRQrAAIPFgYfCQUGTWFzdGVyHgVWYWx1ZQUBMR4IU2VsZWN0ZWRnZGQUKwACDxYGHwkFCEJhY2hlbG9yHwoFATIfC2hkZBQrAAIPFgYfCQUHRGlwbG9tYR8KBQE0HwtoZGQUKwACDxYGHwkFEEdyYWR1YXRlIERpcGxvbWEfCgUBNR8LaGRkFCsAAg8WBh8JBQNQaEQfCgUBNh8LaGRkDxQrAQVmZmZmZhYBBXdUZWxlcmlrLldlYi5VSS5SYWRDb21ib0JveEl0ZW0sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTIuMS4yMTUuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBYOZg8PFgQeCENzc0NsYXNzBQlyY2JIZWFkZXIeBF8hU0ICAmRkAgEPDxYEHwwFCXJjYkZvb3Rlch8NAgJkZAICDw8WBh8JBQZNYXN0ZXIfCgUBMR8LZ2RkAgMPDxYGHwkFCEJhY2hlbG9yHwoFATIfC2hkZAIEDw8WBh8JBQdEaXBsb21hHwoFATQfC2hkZAIFDw8WBh8JBRBHcmFkdWF0ZSBEaXBsb21hHwoFATUfC2hkZAIGDw8WBh8JBQNQaEQfCgUBNh8LaGRkAisPFCsAAg8WDB8GZx8FBQJpZB8JZR8IZB8DaB8EBQV2YWx1ZWQPFCsADBQrAAIPFgYfCQUdTmF0dXJhbCBhbmQgUGh5c2ljYWwgU2NpZW5jZXMfCgUBMR8LZ2RkFCsAAg8WBh8JBRZJbmZvcm1hdGlvbiBUZWNobm9sb2d5HwoFAjQ3HwtoZGQUKwACDxYGHwkFJEVuZ2luZWVyaW5nIGFuZCBSZWxhdGVkIFRlY2hub2xvZ2llcx8KBQI3NB8LaGRkFCsAAg8WBh8JBRlBcmNoaXRlY3R1cmUgYW5kIEJ1aWxkaW5nHwoFAzE2Mx8LaGRkFCsAAg8WBh8JBS5BZ3JpY3VsdHVyZSwgRW52aXJvbm1lbnRhbCBhbmQgUmVsYXRlZCBTdHVkaWVzHwoFAzE5MB8LaGRkFCsAAg8WBh8JBQZIZWFsdGgfCgUDMjExHwtoZGQUKwACDxYGHwkFCUVkdWNhdGlvbh8KBQMyODYfC2hkZBQrAAIPFgYfCQUXTWFuYWdlbWVudCBhbmQgQ29tbWVyY2UfCgUDMzA3HwtoZGQUKwACDxYGHwkFE1NvY2lldHkgYW5kIEN1bHR1cmUfCgUDMzUyHwtoZGQUKwACDxYGHwkFDUNyZWF0aXZlIEFydHMfCgUDNDMxHwtoZGQUKwACDxYGHwkFJ0Zvb2QsIEhvc3BpdGFsaXR5IGFuZCBQZXJzb25hbCBTZXJ2aWNlcx8KBQM0NjMfC2hkZBQrAAIPFgYfCQUWTWl4ZWQgRmllbGQgUHJvZ3JhbW1lcx8KBQM0NzYfC2hkZA8UKwEMZmZmZmZmZmZmZmZmFgEFd1RlbGVyaWsuV2ViLlVJLlJhZENvbWJvQm94SXRlbSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxMi4xLjIxNS40MCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FhxmDw8WBB8MBQlyY2JIZWFkZXIfDQICZGQCAQ8PFgQfDAUJcmNiRm9vdGVyHw0CAmRkAgIPDxYGHwkFHU5hdHVyYWwgYW5kIFBoeXNpY2FsIFNjaWVuY2VzHwoFATEfC2dkZAIDDw8WBh8JBRZJbmZvcm1hdGlvbiBUZWNobm9sb2d5HwoFAjQ3HwtoZGQCBA8PFgYfCQUkRW5naW5lZXJpbmcgYW5kIFJlbGF0ZWQgVGVjaG5vbG9naWVzHwoFAjc0HwtoZGQCBQ8PFgYfCQUZQXJjaGl0ZWN0dXJlIGFuZCBCdWlsZGluZx8KBQMxNjMfC2hkZAIGDw8WBh8JBS5BZ3JpY3VsdHVyZSwgRW52aXJvbm1lbnRhbCBhbmQgUmVsYXRlZCBTdHVkaWVzHwoFAzE5MB8LaGRkAgcPDxYGHwkFBkhlYWx0aB8KBQMyMTEfC2hkZAIIDw8WBh8JBQlFZHVjYXRpb24fCgUDMjg2HwtoZGQCCQ8PFgYfCQUXTWFuYWdlbWVudCBhbmQgQ29tbWVyY2UfCgUDMzA3HwtoZGQCCg8PFgYfCQUTU29jaWV0eSBhbmQgQ3VsdHVyZR8KBQMzNTIfC2hkZAILDw8WBh8JBQ1DcmVhdGl2ZSBBcnRzHwoFAzQzMR8LaGRkAgwPDxYGHwkFJ0Zvb2QsIEhvc3BpdGFsaXR5IGFuZCBQZXJzb25hbCBTZXJ2aWNlcx8KBQM0NjMfC2hkZAINDw8WBh8JBRZNaXhlZCBGaWVsZCBQcm9ncmFtbWVzHwoFAzQ3Nh8LaGRkAi0PFCsAAg8WBB8DaB8JZWRkFgRmDw8WBB8MBQlyY2JIZWFkZXIfDQICZGQCAQ8PFgQfDAUJcmNiRm9vdGVyHw0CAmRkAjMPFgIeBXN0eWxlBUJtYXJnaW4tYm90dG9tOjE1cHg7bWFyZ2luLWxlZnQ6MTBweDt0ZXh0LWFsaWduOmxlZnQ7ZGlzcGxheTpibG9jaztkGAQFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYLBQ9jYmxJbnFDb3VudHJ5JDAFD2NibElucUNvdW50cnkkMQUPY2JsSW5xQ291bnRyeSQyBQ9jYmxJbnFDb3VudHJ5JDMFD2NibElucUNvdW50cnkkNAUPY2JsSW5xQ291bnRyeSQ0BQlkZGxhd2FyZHMFDnJkb21ham9yYXdhcmRzBQ5yZG9taW5vcmF3YXJkcwUJY2JFbWFpbE1lBQdjYlNtc01lBQ5yZG9taW5vcmF3YXJkcw8UKwACZWVkBQ5yZG9tYWpvcmF3YXJkcw8UKwACZQUBMWQFCWRkbGF3YXJkcw8UKwACZQUBMWSR/NXI+/+Tnusd5yLcJghjB00dca3ddWSTNLPIc0QV1w==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=n9s_5xEs0EppyTCHnmB7z32MRy3qVqImM2XfCzNVxjZOgein4b94rbhGN18l5GkZmYt8Chl5bZCdDV074urVchxx_7fS4AY69RdHPHYmQgo1&amp;t=635147653028703554" type="text/javascript"></script>
+
+<link class='Telerik_stylesheet' type='text/css' rel='stylesheet' href='/WebResource.axd?d=FiphpL0W4fKwOL0_-djk9tH5Z-IesPlY6ndmZP-5nDoNJDTRZuvOxUPK0gX58s4QRyrVs0iF1weJsScBPRWFF8RtB7lxpQtw1-NTks6NGG9776ogtxyuJxA4AlohGsO9EiQAccGvNEteBNH_riNMGQ2&amp;t=634648552360000000'></link>
+<script src="/ScriptResource.axd?d=rf2S29PVC5d4Se3_8GZr0pL3FaSW0cNwxDyxhVysXsMmLd7IqVNdfHMpVCfyUVqwJepEO-qu09GSUCZMsGlg10pmGgcLnUdipAoWleAMqk3y7HudHjvaVPu6kp2KPZtwLb5uaKpTg9jSG8MCFkOzfCCqpL74-8sEp2Czlyg3RCY1&amp;t=2e8dfcac" type="text/javascript"></script><link class='Telerik_stylesheet' type='text/css' rel='stylesheet' href='/WebResource.axd?d=8w4bN1gLTlaiEpD-eIRvO4q9FnpsJ2S-81vx82C3ORSUo7t18ybYHBdcuX8gLMccA5DSB-ktbWJdSHmurwEz_XBYgRg_E_NSbeVBp5WgR4V2mnBQuRTBKiYOLv__uBLIJ7ALQvQZuKzZlDueDhlgHw2&amp;t=634648552360000000'></link><link class='Telerik_stylesheet' type='text/css' rel='stylesheet' href='/WebResource.axd?d=3F8lZyCofzL5KemyepyoSqhuuRovhMHqplqBCKWud6ie_OFr59exm2V8dF1Zu3yL17QvIX5rgKJ1gTbaWqXEPpUiiq3i9cO-wXU1BHzghoAbOyUNUv1BQJWcz27K7_fbP4eFAadsjcymDCWuuJGpYuu2K1UkGVkx5cHHvWm3wjo1&amp;t=634648552360000000'></link>
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3afa6755fd-da1a-49d3-9eb4-1e473e780ecd%3aea597d4b%3ab25378d2%3bTelerik.Web.UI%2c+Version%3d2012.1.215.40%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aen-US%3ab29b07e8-2c1e-44e5-9e1b-59bb6459fb01%3a16e4e7cd%3aed16cbdc%3af7645509%3a24ee1bba%3af46195d3%3a2003d0b8%3a1e771326%3aaa288e2d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+BranchNames:function(id,hdnval,succeededCallback, failedCallback, userContext) {
+/// <param name="id" type="String">System.String</param>
+/// <param name="hdnval" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'BranchNames',false,{id:id,hdnval:hdnval},succeededCallback,failedCallback,userContext); },
+GetAddress:function(cityid,succeededCallback, failedCallback, userContext) {
+/// <param name="cityid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetAddress',false,{cityid:cityid},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("registerwithus.aspx");
+PageMethods.BranchNames= function(id,hdnval,onSuccess,onFailed,userContext) {
+/// <param name="id" type="String">System.String</param>
+/// <param name="hdnval" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.BranchNames(id,hdnval,onSuccess,onFailed,userContext); }
+PageMethods.GetAddress= function(cityid,onSuccess,onFailed,userContext) {
+/// <param name="cityid" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.GetAddress(cityid,onSuccess,onFailed,userContext); }
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAFNOpbq4X2LHEoptWmqjka4ax+c2EYGT16XI3syClAV4nimy+sGeGJPvrhnPIUDixSDSLU1Bmq52nlK9N9e4mf0NUnb4mbFcCb/Jb6XgpwA4t0be84jzbT46S++FL3h3D60OVCDYOCfREGUySpRkox8lMQY0/Emk1mrp8Omz3KeBf8hqsQXbyJl5mIk0pyygkcayNCg2Oz/H80ZpzJJ36YXaZEZEkPQEsyVbyiNuxNKoDQ9bVuVgVVjQK1vUORCPIdBDyFaPh8qjjS7rXrFVk+Ybp05gvhalcUL1qFba5517JwrMlXpv03esrxHoPHkg68pLztwFGvYB07E+Xhvme5zEr9OFDHcxkCOHL2ydDvUH1+pIGujOplubvpuqMkHSZHm40uBrbzjWNHKvJe9Dr/v1jdhgsX8HPkTxnU9aiLAspIqWYmACgWw1C96+68k9r3wpGmWZhNgWVbAbIownamsBZoeTf5drcSgBNDylJa/h7aw3547TLuU8WmqmldBhwhl2FutztSE13sv/tNOJIjH7Hsd560VefYOMfPe09jdyr+QtBbnMLw6roBbolbMiMj12XXNZ2eV+dulvvKM+U8TpXC3RZVF5c98a71jEayIvcJ/71K5Sb8aDf0JEyP3oOduvdd3OIdCGCyz2NxCBezVA1rHfpHsDY8BDfRYQnLhz0Zts0pAAv05c9lSZNwHNFXPOZN7OIFYYzQ1easqTQW+1KFGSBAxau8G3m7RX7QCugVng5YhDUGhFCSVu6sSmeVcf9c/z9KU6RIkB+StxZZab5EdLUD1/gsBx3voFaZFZyRd7M7B3VNkic+AKXdhdndHkSqpkhurRNxyo4FVDxsBVAUSdUwiSAY4l7T/qKqZk2tuQQaOrQqZWlnvr07bzb5lQuRip8eSK/gVzvPl/+ZZhzzMFSH0oY+8MyKn3DXemeMX02wvRgNwD+AdrmbypAzbVwKh/Gq95rsipAt/zSGTZxxEQ2YhOYxZGPd6tjOwUoXsQfapTU9jh9wgvLld6f2jVevPd1kyEXALmv9zIDNciPzr/B4SSjuaB0Sr2VxuhVdgWgPHqQoGZQm1Gqhcoxy7FC//NPQAihc2F1PbAcdhB5e/ik/oWZbCjmzpfpuTRNmGvbtrMWbtlELJiFJG4FPb980Ofohokb+P3cAONkOkvJiSnU3v33aTRM0EY8XmrGEtNy6I1P+qKbigiRfBCtRL0FJCHhVcM/MgKZqATzujXd7wwHXwJXcMcfqhUmjkRD2iMtCWuAkABnw/YzW1fwKOUBhx91uQvKEQR8RwksXa8qaAvx0l9SHtopXeKICAI4K3SD7H6cVhmpyzfY/RLhI+KnKyZSVq68ZlLjzEQTYZGgtl7CC9SKOmIXucCwEE/2Mqct5+Mgo12q6e9DMSQG83//2Im4u0tsdsQLDDCCDdl2usrUOxvuWshmNq/O8J0/nsGbaEplgRHQz0KytB6HqFMtKpjjBQpKgLlhBZb6xKMyCVmsYye+6wYABCyGx5ezCsptoolC5onP5FY9LMjZOLbM89tRlg0EgC+6hMTGinxxi2NRSX8llRNbjHNw4V9ix7x+SdRMO8g43oQ68HPJUVugb5vGYs70+g637D5FlS2bpWj1Tk0a/nleCOXBSt+LLcbjP/HDA86TxGnG3/vQc32xH+r375eAZLSXh7cTjVHFKblmMKw6vkRuVLGv62bi6hs5S2VWr2cNpDn7YR8ncCGv//T2p3l9s104n8iTC3FH3nra93OB915opICXNmZSHCQOJTTuYPNBku68Z7YvQgFSSy7yB8HxqblSxZ+1+Ac" />
+</div>
+                <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdatePanel1','UpdatePanel1','trdominorawardsPanel','','tradJMSU','radJMSU'], ['cblInqCountry','cblInqCountry','rdomajorawards',''], [], 90, '');
+//]]>
+</script>
+
+                <!-- 2012.1.215.40 --><div id="radJMSU">
+	<span id="radJM" style="display:none;"></span>
+</div>
+                <div id="ajlp" style="display:none;">
+	
+                
+</div>
+                <div class="wrapper">
+            
+                    <div class="pageContent">
+                        <div id="register">
+                            <div class="content" style="background-color: #fff; margin-bottom: 5px;">
+                                <span style="font-size: 11px;">Please provide us the following details and we will call you as soon as possible.</span>
+                                
+                                <div><h3 class="heading_red">Personal Details</h3>
+                                    <fieldset>
+                                        
+                                            <div class="formRow">
+                                                <div class="fieldContainer">
+                                                    <div class="field" style="margin-top: 14px;">
+                                                    <select name="ddltitle" id="ddltitle" class="inputForm" align="left" style="width:50px;">
+	<option value="71">Mr</option>
+	<option value="72">Mrs</option>
+	<option value="73">Miss</option>
+	<option value="74">Ms</option>
+	<option value="75">Dr</option>
+	<option value="76">Prof</option>
+
+</select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="fieldContainer" id="myFormControl2">
+                                                    <div class="fieldLabel">First name*
+                                                        <span class="im" style="width: 16px; display: inline;">
+                                                        <span id="RequiredFieldValidator1" title="required first name" style="display:none;"><img id="imgfirstname" title="required first name" alt="required first name" src="images/crossRed16.gif" /></span></span>
+                                                        </div>
+                                                    <div class="field">
+                                                        <input name="txtfirstname" type="text" maxlength="100" id="txtfirstname" class="inputReg" style="width:120px;" />
+                                                        </div>
+                                                </div>
+                                            
+                                                <div class="fieldContainer" id="myFormControl2">
+                                                    <div class="fieldLabel">Last Name*
+                                                        <span class="im" style="width: 16px; display: inline;">
+                                                        <span id="RequiredFieldValidator2" title="required last name" style="display:none;"><img id="imglastname" title="required last name" alt="required last name" src="images/crossRed16.gif" /></span></span>                                        
+                                                    </div>
+                                                    <div class="field">
+                                                        <input name="txtlastname" type="text" maxlength="100" id="txtlastname" class="inputReg" style="width:150px;" />
+                                                        </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- comment here-->
+                                            <div class="formRow">
+                                            
+                                                <div class="fieldContainer" id="myFormControl3">
+                                                    <div class="fieldLabel">Date of birth*
+                                                        <span id="RequiredFieldValidator4" title="required date of birth" style="display:none;"><img id="imgfirstname" title="required date of birth" alt="required date of birth" src="images/crossRed16.gif" /></span>
+                                                        <span id="RequiredFieldValidator6" title="required date of birth" style="display:none;"><img id="imgfirstname" title="required date of birth" alt="required date of birth" src="images/crossRed16.gif" /></span>                                        
+                                                    </div>
+                                                    <div class="field">
+                                                        <input name="txtdob" type="text" value="dd/mm/yyyy" maxlength="100" id="txtdob" class="inputReg" onchange="changedate();" style="width:160px;" />
+                                                        <a href='javascript:popUpCalendar(document.forms[0].txtdob, document.forms[0].txtdob, "dd/mm/yyyy")' title="select the date">
+                                                        <img id="calendar" src="images/cal.gif" width="16" height="16" border="0" align="middle" style="margin-top: -12px" alt="cal" /></a>
+                                                        </div>
+                                                </div>
+                                                
+                                                <div class="fieldContainer" id="myFormControl6">
+                                                    <div class="fieldLabel">Mobile no.
+                                                        <span class="im" style="width: 16px; display: inline;">
+                                                        <span id="RequiredFieldValidator5" title="required mobile no" style="display:none;"><img id="imgphone" title="required mobile no" alt="required mobile no" src="images/crossRed16.gif" /></span>
+                                                        <span id="regMobile" title="invalid mobile" style="display:none;"><img id="imgregmobile" title="invalid mobile" alt="invalid mobile" src="images/crossRed16.gif" /></span></span>
+                                                    </div>
+                                                    <div class="field">
+                                                        <input name="txtmobileno" type="text" maxlength="50" id="txtmobileno" class="inputReg" style="width:150px;" />
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>    
+                                            <div class="formRow">
+                                                
+                                                <div id="myFormControl11" class="fieldContainer">
+                                                    <div class="fieldLabel">Street Address</div>
+                                                    <div class="field">
+                                                        <input name="txtstreetaddress" type="text" id="txtstreetaddress" class="inputReg" style="width:180px;" />
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="fieldContainer">
+                                                    <div class="fieldLabel">State of residence
+                                                        <span id="ReqStudentstate" title="select state" style="display:none;"><img id="imgphone" title="select state" alt="select state" src="images/crossRed16.gif" /></span>
+                                                    </div>
+                                                    <div class="field">
+                                                        <select name="ddlStudentState" id="ddlStudentState" class="inputReg" align="left" style="width:158px;">
+	<option value="0">--select--</option>
+	<option value="33">Andaman &amp; Nicobar Islands</option>
+	<option value="5">Andhra Pradesh</option>
+	<option value="6">Arunachal Pradesh</option>
+	<option value="7">Assam</option>
+	<option value="8">Bihar</option>
+	<option value="3">Chandigarh</option>
+	<option value="9">Chhattisgarh</option>
+	<option value="34">Dadra and Nagar Haveli</option>
+	<option value="35">Daman and Diu</option>
+	<option value="4">Delhi</option>
+	<option value="10">Goa</option>
+	<option value="11">Gujarat</option>
+	<option value="12">Haryana</option>
+	<option value="13">Himachal Pradesh</option>
+	<option value="14">Jammu and Kashmir</option>
+	<option value="15">Jharkhand </option>
+	<option value="16">Karnataka </option>
+	<option value="17">Kerala</option>
+	<option value="36">Lakshadweep</option>
+	<option value="18">Madhya Pradesh</option>
+	<option value="19">Maharashtra</option>
+	<option value="20">Manipur</option>
+	<option value="21">Meghalaya</option>
+	<option value="22">Mizoram</option>
+	<option value="23">Nagaland</option>
+	<option value="38">New Delhi</option>
+	<option value="24">Orissa</option>
+	<option value="37">Pondicherry</option>
+	<option value="25">Punjab</option>
+	<option value="26">Rajasthan</option>
+	<option value="27">Sikkim</option>
+	<option value="28">Tamil Nadu</option>
+	<option value="29">Tripura</option>
+	<option value="31">Uttar Pradesh</option>
+	<option value="30">Uttarakhand</option>
+	<option value="32">West Bengal</option>
+
+</select>
+                                                        </div>
+                                                </div>
+                                                
+                                           </div>
+                                           <div class="formRow">
+                                           
+                                                <div id="myFormControl12" class="fieldContainer">
+                                                    <div class="fieldLabel">City of residence
+                                                        <span class="im" style="width: 16px; display: inline;">
+                                                        <span id="reqStudentCity" title="required city" style="display:none;"><img id="imgphone" title="required city" alt="required city" src="images/crossRed16.gif" /></span></span>
+                                                    </div>
+                                                    <div class="field">
+                                                        <input name="txtStudentCity" type="text" maxlength="50" id="txtStudentCity" class="inputReg" style="width:180px;" />
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="fieldContainer">
+                                                    <div class="fieldLabel">Email*
+                                                        <span class="im" style="width: 16px; display: inline;">
+                                                        <span id="RequiredFieldValidator3" title="required email" style="display:none;"><img id="imgemail" title="required email" alt="required email" src="images/crossRed16.gif" /></span>
+                                                        <span id="RegularExpressionValidatoremailid" title="invalid emailid" style="display:none;"><img id="imgemail" title="invalid email" alt="invalid email" src="images/crossRed16.gif" /></span></span>
+                                                    </div>
+                                                    <div class="field">
+                                                        <input name="txtemailid" type="text" maxlength="100" id="txtemailid" class="inputReg" style="width:150px;" />
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>                  
+                                    </fieldset>
+                                    </div>                   
+            <div id="divStateCity" style="width: 100%;">
+                                    <h3 class="heading_red">Select our nearest branch*</h3>
+                                    <fieldset>                            
+                                        <div id="myFormControl8" class="formRow">
+                                            <div class="fieldContainer" style="margin-left: 0px;">Branch
+                                                <span id="RequiredFieldValidator7" title="select branch" style="display:none;"><img id="imgbranch" title="select branch" alt="select branch" src="images/crossRed16.gif" /></span>
+                                            </div>
+                                            <div class="fieldLabel"></div>
+                                            <div class="field" style="margin-top: -10px;">
+                                                <select name="ddlcity" id="ddlcity" class="inputReg" align="left" onchange="setcity();" style="width:185px;">
+	<option value="0">-select-</option>
+	<option value="6">amritsar</option>
+	<option value="28">bangalore</option>
+	<option value="1">chandigarh</option>
+	<option value="23">chennai</option>
+	<option value="25">cochin</option>
+	<option value="21">coimbatore</option>
+	<option value="4">delhi [pitampura]</option>
+	<option value="27">delhi [south]</option>
+	<option value="30">hyderabad</option>
+	<option value="36">jaipur</option>
+	<option value="7">jallandhar</option>
+	<option value="26">kottayam</option>
+	<option value="5">ludhiana</option>
+	<option value="2">melbourne</option>
+	<option value="29">mysore</option>
+	<option value="3">patiala</option>
+	<option value="22">tiruchirappalli</option>
+
+</select>
+                                                <input type="hidden" name="test" id="test" value="0" />
+                                                <div style="display: none;">
+                                                    <input type="hidden" name="hdncity" id="hdncity" />
+                                                    <input type="hidden" name="hdnselectedindex" id="hdnselectedindex" />
+                                                    <input type="hidden" name="hdncityid" id="hdncityid" />
+                                                </div>                                
+                                            </div>
+                                            
+                                            <input type="hidden" name="hdnfromvisit" id="hdnfromvisit" value="0" />
+                                        </div>
+                                    <div style="width:10px; height:5px; clear:both;"></div>
+                                    </fieldset>
+                                    
+                                    </div>
+                                    
+                                    <div><h3 class="heading_red">Study preferences</h3>
+                                    <fieldset>                        	                            
+                                        <p align="left" style="margin-left: 10px;">Preferred country <span>[you may select multiple destinations]</p>
+                                        <div class="formRow">
+                                            <div class="fieldContainer" style="margin-left: -10px;">
+                                                <div id="UpdatePanel1">
+	
+                                                <table id="cblInqCountry" class="ckbBx" style="width:500px;">
+		<tr>
+			<td><input id="cblInqCountry_0" type="checkbox" name="cblInqCountry$0" value="12" /><label for="cblInqCountry_0">Australia</label></td><td><input id="cblInqCountry_1" type="checkbox" name="cblInqCountry$1" value="39" /><label for="cblInqCountry_1">Canada</label></td><td><input id="cblInqCountry_2" type="checkbox" name="cblInqCountry$2" value="181" /><label for="cblInqCountry_2">New Zealand</label></td><td><input id="cblInqCountry_3" type="checkbox" name="cblInqCountry$3" value="240" /><label for="cblInqCountry_3">United Kingdom</label></td><td><input id="cblInqCountry_4" type="checkbox" name="cblInqCountry$4" value="242" /><label for="cblInqCountry_4">USA</label></td>
+		</tr>
+	</table>
+                                                
+</div>								
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="width:10px; height:5px; clear:both;"></div>
+                                   
+                                   
+                                                          
+                                    <div id="Div2">
+                                        <div style="width: 60px; display: block;">Awards</div>
+                                        <div style="display: block; float: left; width: 250px; margin-left: 10px; margin-bottom: 10px">
+                                        <div id="ddlawards" class="RadComboBox RadComboBox_Default" style="width:250px;white-space:normal;">
+	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
+		<tr class="rcbReadOnly">
+			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="ddlawards" type="text" class="rcbInput" id="ddlawards_Input" value="" readonly="readonly" /></td>
+			<td class="rcbArrowCell rcbArrowCellRight"><a id="ddlawards_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table>
+	<div class="rcbSlide" style="z-index:6000;"><div id="ddlawards_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div class="rcbScroll rcbWidth" style="width:100%;"><ul class="rcbList" style="list-style:none;margin:0;padding:0;zoom:1;"><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Master</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Bachelor</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Diploma</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Graduate Diploma</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />PhD</li></ul></div></div></div><input id="ddlawards_ClientState" name="ddlawards_ClientState" type="hidden" />
+</div>
+                                        </div>
+                                    </div>
+                                    <div style="width:10px; height:5px; clear:both;"></div>
+                                <div style="overflow: hidden;">
+                                    <div style="width: 50%;float:left;">
+                                        <span style="text-align:left; display:block; margin-left: 10px;">Major area</span>
+                                            <div align="left" style="margin-left: 10px;"><div id="rdomajorawards" class="RadComboBox RadComboBox_Default" style="width:250px;white-space:normal;">
+	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
+		<tr class="rcbReadOnly">
+			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="rdomajorawards" type="text" class="rcbInput" id="rdomajorawards_Input" value="" readonly="readonly" /></td>
+			<td class="rcbArrowCell rcbArrowCellRight"><a id="rdomajorawards_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table>
+	<div class="rcbSlide" style="z-index:6000;"><div id="rdomajorawards_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div class="rcbScroll rcbWidth" style="width:100%;"><ul class="rcbList" style="list-style:none;margin:0;padding:0;zoom:1;"><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Natural and Physical Sciences</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Information Technology</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Engineering and Related Technologies</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Architecture and Building</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Agriculture, Environmental and Related Studies</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Health</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Education</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Management and Commerce</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Society and Culture</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Creative Arts</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Food, Hospitality and Personal Services</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Mixed Field Programmes</li></ul></div></div></div><input id="rdomajorawards_ClientState" name="rdomajorawards_ClientState" type="hidden" />
+</div></div>
+                                    </div>
+                                    <br />
+                                    <div style="width: 50%; float: left; margin-top: -14px;">
+                                        <span style="text-align:left; display:block;">Minor area</span>
+                                            <div align="left">
+                                        <span id="rdominorawardsPanel"><div id="rdominorawards" class="RadComboBox RadComboBox_Default" style="width:250px;white-space:normal;">
+	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
+		<tr class="rcbReadOnly">
+			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="rdominorawards" type="text" class="rcbInput" id="rdominorawards_Input" value="" readonly="readonly" /></td>
+			<td class="rcbArrowCell rcbArrowCellRight"><a id="rdominorawards_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table>
+	<div class="rcbSlide" style="z-index:6000;"><div id="rdominorawards_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div class="rcbScroll rcbWidth" style="width:100%;"></div></div></div><input id="rdominorawards_ClientState" name="rdominorawards_ClientState" type="hidden" />
+</div></span></div>
+                                    </div>
+                                </div>
+                                    
+                                <div id="studentStateCity" style="display: none; width: 250px; margin-left: 30px;" class="fl"></div>
+                                <div class="gap5 cl"></div>
+                                
+                                <br />
+                                <input type="hidden" name="hdndob" id="hdndob" value="0" />
+                                <div id="divEmailSms" style="margin-bottom:15px;margin-left:10px;text-align:left;display:block;" align="left">
+                                    <div style="padding-top: 5px;">
+                                        <span class="ckbBx"><input id="cbEmailMe" type="checkbox" name="cbEmailMe" checked="checked" /><label for="cbEmailMe"> Email me the upcoming interviews</label></span>
+                                    </div>
+                                    <div>
+                                        <span class="ckbBx"><input id="cbSmsMe" type="checkbox" name="cbSmsMe" checked="checked" /><label for="cbSmsMe"> SMS me the upcoming interviews</label></span>
+                                    </div>
+                                </div>
+                                <div id="myFormControl10" style="display: block; clear: both; margin-top: 10px; margin-left: 10px; padding-bottom: 5px;">
+                                    <div align="left">
+                                        <input type="submit" name="btnsubmit" value="Submit" onclick="return datavalidation();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnsubmit&quot;, &quot;&quot;, true, &quot;emailid&quot;, &quot;&quot;, false, false))" id="btnsubmit" class="btn" />
+                                        <img id="imgwaitreg" style="display: none" alt="" src="images/Stprogress.gif" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myData" style="display: none;">
+                        
+                    </div>
+                            
+                </div>
+                
+                    <script type="text/javascript">
+                        var cal_obj2 = null;
+            
+                        var format = '%j %M %Y %H:%i';
+            
+                        // show calendar
+                        function show_cal(el) {
+                            //if (cal_obj2) return;
+                            var text_field = document.getElementById("tdob");
+                            var cal3_td = document.getElementById('cal3_td');
+            
+                            var cal_obj3 = new RichCalendar();
+                            cal_obj3.auto_close = false;
+                            cal_obj3.user_onchange_handler = cal_on_change_dummy;
+                            cal_obj3.user_onclose_handler = cal3_on_close;
+                            cal_obj3.show_at_element(cal3_td, "child");
+            
+                            // user defined onclose handler
+                            function cal3_on_close(cal) {
+                            }
+                        }
+            
+                        // user defined onchange handler
+                        function cal2_on_change(cal, object_code) {
+                            if (object_code == 'day') {
+                                document.getElementById("tdob").value = cal.get_formatted_date(format);
+                                cal.hide();
+                                cal_obj2 = null;
+                            }
+                        }
+            
+                        // user defined onclose handler (used in pop-up mode - when auto_close is true)
+                        function cal2_on_close(cal) {
+                            //	if (window.confirm('Are you sure to close the calendar?')) {
+                            //		cal.hide();
+                            //		cal_obj2 = null;
+                            //	}
+                        }
+            
+                        // user defined onautoclose handler
+                        function cal2_on_autoclose(cal) {
+                            cal_obj2 = null;
+                        }
+            
+            
+                        function cal_on_change_dummy(cal, object_code) {
+                            if (object_code == 'day') {
+                                alert('Date selected: ' + cal.get_formatted_date());
+                                cal.show_date();
+                            }
+                        }
+            
+                        function checkvalue() {
+                            //        if (document.getElementById('txtdob').value == "") {
+                            //            document.getElementById('imgdateofbirth').style.display = 'inline';
+                            //        }
+                            //        else {
+                            //            document.getElementById('imgdateofbirth').style.display = 'none';
+                            //        }
+                        }
+                        function setcity() {
+                            chkcount = 0;
+                            var w = document.getElementById('ddlcity').selectedIndex;
+                            var selected_text = document.getElementById('ddlcity').options[w].text;
+                            document.getElementById('hdncityid').value = document.getElementById('ddlcity').value;
+                            document.getElementById('hdncity').value = selected_text;
+                            if (document.getElementById('hdncityid').value != 0) {
+                                PageMethods.GetAddress(document.getElementById('hdncityid').value, SucceededBranch, FailedBranch);
+                            }
+                            else {
+                                clearaddress();
+            
+                                return false;
+                            }
+                        }
+                        function SucceededBranch(results) {
+                            clearaddress();
+                            document.getElementById("city1").style.width = "180px";
+                            var city_data = results;
+                            var itemData = city_data.split("~");
+                            if (itemData.length == 2) {
+                                document.getElementById("city1").innerHTML = itemData[0];
+                                document.getElementById("city2").innerHTML = itemData[1];
+                            }
+                            else {
+                                document.getElementById("city1").innerHTML = itemData[0];
+                            }
+                        }
+            
+                        function FailedBranch() {
+                            clearaddress();
+                        }
+            
+                        function clearaddress() {
+                            document.getElementById("city1").innerHTML = '';
+                            document.getElementById("city2").innerHTML = '';
+                        }
+                        function changedate() {
+                            var txtdob = document.getElementById('txtdob');
+            
+                            var date = cal_prs_datenew(txtdob.value);
+                            if (null != date && date != "")
+                                return;
+                            else
+                                txtdob.value = "";
+                        }
+            
+                        function datavalidation() {
+                            var isValid = true;
+                            if (document.getElementById('txtfirstname').value == "") {
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator1'), true);
+                                isValid = false;
+            
+                            }
+                            if (document.getElementById('txtlastname').value == "") {
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator2'), true);
+                                isValid = false;
+                            }
+            
+                            document.getElementById('hdndob').value = document.getElementById('txtdob').value;
+                            if (document.getElementById('hdndob').value == "" || document.getElementById('hdndob').value == "dd/mm/yyyy") {
+                                //document.getElementById('imgdateofbirth').style.display = 'inline';
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator6'), true);
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator4'), true);
+                                isValid = false;
+                            }
+                            else {
+                                var date = cal_prs_datenew(document.getElementById('hdndob').value);
+                                if (null != date && date != "") {
+                                    ValidatorEnable(document.getElementById('RequiredFieldValidator6'), false);
+                                    ValidatorEnable(document.getElementById('RequiredFieldValidator4'), false);
+                                    isValid = true;
+                                }
+                                else {
+                                    document.getElementById('txtdob').value = "";
+                                    ValidatorEnable(document.getElementById('RequiredFieldValidator6'), true);
+                                    ValidatorEnable(document.getElementById('RequiredFieldValidator4'), true);
+                                    isValid = false;
+                                }
+                            }
+            
+                            if (document.getElementById('txtemailid').value == "") {
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator3'), true);
+                                isValid = false;
+                            }
+                            else {
+                                var str = document.getElementById('txtemailid').value;
+                                var filter = /^.+@.+\..{2,3}$/
+            
+                                if (filter.test(str)) {
+                                }
+                                else {
+            
+                                    ValidatorEnable(document.getElementById('RegularExpressionValidatoremailid'), true);
+                                    document.getElementById('txtemailid').focus();
+                                    isValid = false;
+                                }
+                            }
+            
+                            if (document.getElementById('ddlStudentState').value == "0") {
+                                ValidatorEnable(document.getElementById('ReqStudentstate'), true);
+                                isValid = false;
+                            }
+            
+                            if (document.getElementById('txtStudentCity').value == "") {
+                                ValidatorEnable(document.getElementById('reqStudentCity'), true);
+                                isValid = false;
+                            }
+            
+                            if (document.getElementById('txtmobileno').value == "") {
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator5'), true);
+                                isValid = false;
+                            }
+            
+                            if (document.getElementById('ddlcity').value == "0") {
+                                ValidatorEnable(document.getElementById('RequiredFieldValidator7'), true);
+                                isValid = false;
+                            }
+                            return isValid;
+                        }
+                    
+                    </script>
+                
+                
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator1"), document.getElementById("RequiredFieldValidator2"), document.getElementById("RequiredFieldValidator4"), document.getElementById("RequiredFieldValidator6"), document.getElementById("RequiredFieldValidator5"), document.getElementById("regMobile"), document.getElementById("ReqStudentstate"), document.getElementById("reqStudentCity"), document.getElementById("RequiredFieldValidator3"), document.getElementById("RegularExpressionValidatoremailid"), document.getElementById("RequiredFieldValidator7"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "txtfirstname";
+RequiredFieldValidator1.focusOnError = "t";
+RequiredFieldValidator1.display = "Dynamic";
+RequiredFieldValidator1.validationGroup = "emailid";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+var RequiredFieldValidator2 = document.all ? document.all["RequiredFieldValidator2"] : document.getElementById("RequiredFieldValidator2");
+RequiredFieldValidator2.controltovalidate = "txtlastname";
+RequiredFieldValidator2.focusOnError = "t";
+RequiredFieldValidator2.display = "Dynamic";
+RequiredFieldValidator2.validationGroup = "emailid";
+RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator2.initialvalue = "";
+var RequiredFieldValidator4 = document.all ? document.all["RequiredFieldValidator4"] : document.getElementById("RequiredFieldValidator4");
+RequiredFieldValidator4.controltovalidate = "txtdob";
+RequiredFieldValidator4.focusOnError = "t";
+RequiredFieldValidator4.display = "Dynamic";
+RequiredFieldValidator4.validationGroup = "emailid";
+RequiredFieldValidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator4.initialvalue = "dd/mm/yyyy";
+var RequiredFieldValidator6 = document.all ? document.all["RequiredFieldValidator6"] : document.getElementById("RequiredFieldValidator6");
+RequiredFieldValidator6.controltovalidate = "txtdob";
+RequiredFieldValidator6.focusOnError = "t";
+RequiredFieldValidator6.display = "Dynamic";
+RequiredFieldValidator6.validationGroup = "emailid";
+RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator6.initialvalue = "";
+var RequiredFieldValidator5 = document.all ? document.all["RequiredFieldValidator5"] : document.getElementById("RequiredFieldValidator5");
+RequiredFieldValidator5.controltovalidate = "txtmobileno";
+RequiredFieldValidator5.focusOnError = "t";
+RequiredFieldValidator5.display = "Dynamic";
+RequiredFieldValidator5.validationGroup = "emailid";
+RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator5.initialvalue = "";
+var regMobile = document.all ? document.all["regMobile"] : document.getElementById("regMobile");
+regMobile.controltovalidate = "txtmobileno";
+regMobile.focusOnError = "t";
+regMobile.display = "Dynamic";
+regMobile.validationGroup = "emailid";
+regMobile.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+regMobile.validationexpression = "^[+]?\\d{10,12}$";
+var ReqStudentstate = document.all ? document.all["ReqStudentstate"] : document.getElementById("ReqStudentstate");
+ReqStudentstate.controltovalidate = "ddlStudentState";
+ReqStudentstate.focusOnError = "t";
+ReqStudentstate.display = "Dynamic";
+ReqStudentstate.validationGroup = "emailid";
+ReqStudentstate.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ReqStudentstate.initialvalue = "0";
+var reqStudentCity = document.all ? document.all["reqStudentCity"] : document.getElementById("reqStudentCity");
+reqStudentCity.controltovalidate = "txtStudentCity";
+reqStudentCity.focusOnError = "t";
+reqStudentCity.display = "Dynamic";
+reqStudentCity.validationGroup = "emailid";
+reqStudentCity.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+reqStudentCity.initialvalue = "";
+var RequiredFieldValidator3 = document.all ? document.all["RequiredFieldValidator3"] : document.getElementById("RequiredFieldValidator3");
+RequiredFieldValidator3.controltovalidate = "txtemailid";
+RequiredFieldValidator3.focusOnError = "t";
+RequiredFieldValidator3.display = "Dynamic";
+RequiredFieldValidator3.validationGroup = "emailid";
+RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator3.initialvalue = "";
+var RegularExpressionValidatoremailid = document.all ? document.all["RegularExpressionValidatoremailid"] : document.getElementById("RegularExpressionValidatoremailid");
+RegularExpressionValidatoremailid.controltovalidate = "txtemailid";
+RegularExpressionValidatoremailid.focusOnError = "t";
+RegularExpressionValidatoremailid.display = "Dynamic";
+RegularExpressionValidatoremailid.validationGroup = "emailid";
+RegularExpressionValidatoremailid.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+RegularExpressionValidatoremailid.validationexpression = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+var RequiredFieldValidator7 = document.all ? document.all["RequiredFieldValidator7"] : document.getElementById("RequiredFieldValidator7");
+RequiredFieldValidator7.controltovalidate = "ddlcity";
+RequiredFieldValidator7.focusOnError = "t";
+RequiredFieldValidator7.display = "Dynamic";
+RequiredFieldValidator7.validationGroup = "emailid";
+RequiredFieldValidator7.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator7.initialvalue = "0";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[{InitControlID : "rdomajorawards",UpdatedControls : [{ControlID:"rdominorawards",PanelID:"ajlp"}]}],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"radJM","updatePanelsRenderMode":0}, null, null, $get("radJM"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxLoadingPanel, {"initialDelayTime":0,"isSticky":false,"minDisplayTime":0,"skin":"","transparency":0,"uniqueID":"ajlp","zIndex":90000}, null, null, $get("ajlp"));
+});
+
+document.getElementById('RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator1'));
+}
+
+document.getElementById('RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator2'));
+}
+
+document.getElementById('RequiredFieldValidator4').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator4'));
+}
+
+document.getElementById('RequiredFieldValidator6').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator6'));
+}
+
+document.getElementById('RequiredFieldValidator5').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator5'));
+}
+
+document.getElementById('regMobile').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('regMobile'));
+}
+
+document.getElementById('ReqStudentstate').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ReqStudentstate'));
+}
+
+document.getElementById('reqStudentCity').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('reqStudentCity'));
+}
+
+document.getElementById('RequiredFieldValidator3').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator3'));
+}
+
+document.getElementById('RegularExpressionValidatoremailid').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RegularExpressionValidatoremailid'));
+}
+
+document.getElementById('RequiredFieldValidator7').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('RequiredFieldValidator7'));
+}
+
+WebForm_InitCallback();Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_checkBoxes":true,"_dropDownWidth":0,"_height":0,"_skin":"Default","_uniqueId":"ddlawards","_value":"1","checkedIndices":[],"clientStateFieldID":"ddlawards_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"value":"1","selected":true,"checked":false},{"value":"2","checked":false},{"value":"4","checked":false},{"value":"5","checked":false},{"value":"6","checked":false}],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}","selectedIndex":0}, null, null, $get("ddlawards"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_checkBoxes":true,"_dropDownWidth":0,"_height":0,"_postBackOnCheck":true,"_postBackReference":"__doPostBack(\u0027rdomajorawards\u0027,\u0027arguments\u0027)","_skin":"Default","_uniqueId":"rdomajorawards","_value":"1","checkedIndices":[],"clientStateFieldID":"rdomajorawards_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"value":"1","selected":true,"checked":false},{"value":"47","checked":false},{"value":"74","checked":false},{"value":"163","checked":false},{"value":"190","checked":false},{"value":"211","checked":false},{"value":"286","checked":false},{"value":"307","checked":false},{"value":"352","checked":false},{"value":"431","checked":false},{"value":"463","checked":false},{"value":"476","checked":false}],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}","selectedIndex":0}, null, null, $get("rdomajorawards"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_checkBoxes":true,"_dropDownWidth":0,"_height":0,"_skin":"Default","_uniqueId":"rdominorawards","checkedIndices":[],"clientStateFieldID":"rdominorawards_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}"}, null, null, $get("rdominorawards"));
+});
+//]]>
+</script>
+</form>
+                </td>
+                </tr>
+                </table>
+                    
+    		</div> 
+            <!-- Content End Here -->
+            
+        </div>
+        <!-- Left Content End Here -->
+        
+        <!-- Right Content Start From Here -->
+        <div id="rt_container">
+            <div style="margin-bottom: 15px;"><img src="images/study_destinations.jpg" alt="Study Destinations" width="301" height="217" border="0" usemap="#Map2" />
+            <map name="Map2" id="Map2">
+            <area shape="rect" coords="145,181,280,198" href="study_in_the_usa.html" title="Study in the USA" />
+            <area shape="rect" coords="145,149,275,166" href="study_in_the_uk.html" title="Study in the UK" />
+            <area shape="rect" coords="145,117,247,134" href="study_in_newzealand.html" title="Study in New Zealand" />
+            <area shape="rect" coords="145,85,280,102" href="study_in_canada.html" title="Study in Canada" />
+            <area shape="rect" coords="145,54,280,71" href="study_in_australia.html" title="Study in Australia" />
+            </map>
+            </div>
+            
+            <div class="credentials">        	
+                <a href="#" class="prev"></a>
+                <div class="credential_scoller">            
+                <div class="jCarouselLite">
+                    <ul>
+                        <li><img src="images/airc_logo.png" alt="American International Recruitment Council" /></li>
+                    <li><img src="images/evisa_logo.png" alt="eVisa" /></li>              
+                    <li><img src="images/nez_specialist_logo.png" alt="New Zealand Education Specialist Agent" /></li>                        
+                    <li><img src="images/aaeri_logo.png" alt="Education In Australia" /></li>
+                    <li><img src="images/aus_buss_award_logo.png" alt="Australian Business Award Winner 2010" /></li>
+                    <li><img src="images/brw_award.png" alt="BRW Fast 100 Award" /></li>
+                    <li><img src="images/coco_logo.png" alt="Company Owned Company Operated" /></li>
+                    </ul>
+                </div>
+                </div>
+                <a href="#" class="next"></a>
+            </div>
+            
+            <!-- University Banner Script Start From Here -->
+        <div style="overflow: hidden;">
+        <!--<img src="images/adv_banner_2.jpg" width="301" height="88" alt="free admission in oversease, all cources consultants" style="border: none; margin-top: 15px;" />-->
+
+        <div style="border: none; margin-top: 15px;"><iframe src="university_banners.html" width="301" height="88" frameborder="0" scrolling="no"></iframe></div>
+		<img src="images/adv_banner_1.jpg" width="301" height="87" alt="" style="border: none; margin-top: 15px;" />
+        </div>
+        <!-- University Banner Script End Here -->
+        </div>
+        <!-- Right Content End Here -->
+        
+    </div>
+    
+</div>
+<!-- Content End Here -->
+
+
+<?php include_once 'Views/footer.phtml'; ?>                                                

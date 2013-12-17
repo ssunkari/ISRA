@@ -1,0 +1,104 @@
+<?php require('Views/header_'.$view->headerTitle.'.phtml');?>
+<!-- Content Start From Here -->
+<div id="content_container">
+	
+    <!-- Liner Background Start From Here -->
+    <div id="liner_bg_container">
+    	<div class="liner_bg">
+            <div class="breadcrumb"><a href="index.php" title="Home">Home</a>> <a href="work_with_us.html" title="Work With Us">Work With Us</a>><span>Partners</span></div>
+            <div class="img"><img src="images/free_img.jpg" width="301" height="22" alt="all are services are FREE of charge" align="right" /></div>
+        </div>
+    </div>
+    <!-- Liner Background End Here -->
+	
+    <div id="content">
+        
+        <!-- Left Content Start From Here -->
+        <div id="lt_container">
+            
+            <!-- Content Start From Here -->
+            <div class="cnt_txt">
+                <h3 class="heading">Partner</h3>
+                
+                <div style="overflow: hidden;">
+                    <div class="mainForm">                    	
+						<script type="text/javascript" src="js/thickbox.js"></script>
+                        <script type="text/javascript" src="js/jquery.validation.js"></script>
+                        <script type="text/javascript" src="js/utility.js"></script>
+                        <script type="text/javascript" src="js/partner.js" language="javascript"></script>
+                        
+                    	<form name="partnerForm" id="partnerForm" method="post">                       
+                        <fieldset class="mainfield">
+                            <legend>Contact Person</legend>
+                                <table cellpadding="0" cellpadding="10" width="100%" border="0" id="partner_tbl">
+                                <tr>
+                                    <td align="left" width="15%" height="40"><label for="country">Name*</label></td>
+                                    <td align="left" width="35%" height="40"><div class="fieldLabel"><input type="text" id="textname" name="textname" class="required" default-title="name" /></div></td>
+                                    <td align="left" width="15%" height="40"><label for="lname">Position*</label></td>
+                                    <td align="left" width="35%" height="40"><div class="fieldLabel"><input type="text" id="textposition" name="textposition" class="required" default-title="position" /></div></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" height="40"><label for="country">Phone*</label></td>
+                                    <td align="left" height="40"><div class="fieldLabel"><input type="text" id="textcpPhone" name="textcpPhone" class="required" default-title="phone" /></div></td>
+                                    <td align="left" height="40"><label for="lname">Mobile*</label></td>
+                                    <td align="left" height="40"><div class="fieldLabel"><input type="text" id="textcpMobile" name="textcpMobile" class="required" default-title="mobile" /></div></td>
+                                </tr>
+                                <tr>
+                                    <td align="left" height="40"><label for="country">Email*</label></td>
+                                    <td align="left" height="40"><div class="fieldLabel"><input type="text" id="textemail" name="textemail" class="required" default-title="email" /></div></td>
+                                    <td align="left" height="40"></td>
+                                    <td align="left" height="40"></td>
+                                </tr>
+                                </table>
+                        </fieldset>
+                        <br />
+                        <div style="float: right;padding-right:4px;"><input type="image" value="submit" name="submit" src="images/submit_btn.png" /></div>
+                        </form>
+                    </div>
+                </div>
+                            
+            </div>
+            <!-- Content End Here -->
+            
+        </div>
+        <!-- Left Content End Here -->
+        
+        <!-- Right Content Start From Here -->
+        <div id="rt_container">
+            <?php require 'Views/destinations_carousel.phtml';?>
+            
+            <div class="credentials">        	
+                <a href="#" class="prev"></a>
+                <div class="credential_scoller">            
+                <div class="jCarouselLite">
+                    <ul>
+                    <li><img src="images/airc_logo.png" alt="American International Recruitment Council" /></li>
+                    <li><img src="images/evisa_logo.png" alt="eVisa" /></li>              
+                    <li><img src="images/nez_specialist_logo.png" alt="New Zealand Education Specialist Agent" /></li>                        
+                    <li><img src="images/aaeri_logo.png" alt="Education In Australia" /></li>
+                    <li><img src="images/aus_buss_award_logo.png" alt="Australian Business Award Winner 2010" /></li>
+                    <li><img src="images/brw_award.png" alt="BRW Fast 100 Award" /></li>
+                    <li><img src="images/coco_logo.png" alt="Company Owned Company Operated" /></li>
+                    </ul>
+                </div>
+                </div>
+                <a href="#" class="next"></a>
+            </div>
+            
+            <!-- University Banner Script Start From Here -->
+        <div style="overflow: hidden;">
+        <!--<img src="images/adv_banner_2.jpg" width="301" height="88" alt="free admission in oversease, all cources consultants" style="border: none; margin-top: 15px;" />-->
+
+        <div style="border: none; margin-top: 15px;"><iframe src="university_banners.html" width="301" height="88" frameborder="0" scrolling="no"></iframe></div>
+		<img src="images/adv_banner_1.jpg" width="301" height="87" alt="" style="border: none; margin-top: 15px;" />
+        </div>
+        <!-- University Banner Script End Here -->
+        </div>
+        <!-- Right Content End Here -->
+        
+    </div>
+    
+</div>
+<!-- Content End Here -->
+
+<?php include_once 'Views/footer.phtml'; ?>                                                
