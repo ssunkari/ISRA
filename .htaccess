@@ -1,4 +1,9 @@
-SetEnv APPLICATION_ENV development
+RewriteEngine On 
+RewriteBase / 
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R,L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php
 
 #RewriteEngine On
 #RewriteCond %{REQUEST_FILENAME} -s [OR]

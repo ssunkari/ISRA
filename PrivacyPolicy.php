@@ -2,4 +2,4 @@
 $view = new stdClass();
 $view->bannerTitle = 'common';
 $view->headerTitle = 'common';
-include_once 'Views/scripts/Patner.phtml';
+include_once 'Views/scripts/PrivacyPolicy.phtml';

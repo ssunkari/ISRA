@@ -7,7 +7,6 @@
 <meta name="Description" content="ISRA consultants provide best consultant services for overseas education. It helps students to get admission in  universities in Australia, Canada, New Zealand, UK, USA.">
 <title>Study in UK | Study in New Zealand | Study in The USA | Study in Canada | Study in Australia | Overseas Education | Study in Overseas | Study Consultants</title>
 <link href="css/home.css" type="text/css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css">
 
 <script id="facebook-jssdk" src="js/all.js"></script><script type="text/javascript" async="" src="js/ga.js"></script><script type="text/javascript" src="js/jquery.min.js"></script><style type="text/css"></style>
 <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
@@ -24,6 +23,7 @@
 <script src="js/thickbox.js" type="text/javascript"></script>
 <link href="css/thickbox.css" rel="stylesheet" type="text/css">
 
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css">
 
 <link href="css/home.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css">
@@ -43,10 +43,11 @@ $(document).ready(function() {
 	  $('#testimonials1')
 	.after('<div id="nav2">')
 	.cycle({
-        fx: 'scrollRight', // choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
-		//pager:  '#nav2'
-              
+        fx: 'fade', // choose your transition type, ex: fade, scrollUp, scrollRight, shuffle
+		//pager:  '#nav2'              
      });
+      $('#testimonials1').css('height','40px');
+     
      
       $('#testimonials2')
 	.after('<div id="nav2">')
