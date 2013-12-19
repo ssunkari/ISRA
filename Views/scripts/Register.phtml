@@ -89,17 +89,7 @@ div.field select
 {
 	width: 258px;
 }
-div.fieldLabel span.error
-{
-	color: #f00;
-	background-image: url(/images/err.gif);
-	background-repeat: no-repeat;
-	display: block;
-	float: right;
-	width: 25px !important;
-	text-indent: -9999px;
-	height: 15px !important;
-}
+
 div.mainForm label
 {
 	width: auto;
@@ -110,29 +100,6 @@ div.mainForm label
 	width: 250px;
 	float: left;
 	overflow: hidden;
-}
-.sel{color:#504E4E;margin: 0;width: 150px;}
-a.closeLink{text-indent:-9999px;background-image:url('/images/_crossRed16.gif') no-repeat scroll right middle;height:16px;width:16px;}
-.ckbBx input[type="checkbox"] {
-	margin-right: 3px;
-}
-.rcbItem  input[type="checkbox"] {
-	margin-right: 3px;
-	margin-bottom:5px;
-	font-size:11px !important;
-}
-.rcbHovered  input[type="checkbox"] {
-	margin-right: 3px;
-	margin-bottom:5px;
-	font-size:11px !important;
-}
-
-.rcbList li.rcbItem {
-	font-size:11px !important;
-}
-
-.rcbList li.rcbHovered {
-	font-size:11px !important;
 }
 .btn {
 	padding: 5px 10px;
@@ -167,31 +134,7 @@ a.closeLink{text-indent:-9999px;background-image:url('/images/_crossRed16.gif') 
                 <tr>  
                 <td>
                 <form method="post" action="<?php echo $_SERVER["PHP_SELF"]?>" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
-<div class="aspNetHidden">
-<input type="hidden" name="ScriptManager1_TSM" id="ScriptManager1_TSM" value="" />
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTkyODE5OTA4NA8WBh4IdmlzaXRfZmsFATAeA2tleWUeBG1vZGUC8QYWAgIBD2QWBAIFDw8WAh4XRW5hYmxlQWpheFNraW5SZW5kZXJpbmdoZGQCBw9kFhICAQ8QDxYGHg1EYXRhVGV4dEZpZWxkBQV2YWx1ZR4ORGF0YVZhbHVlRmllbGQFAmlkHgtfIURhdGFCb3VuZGdkEBUGAk1yA01ycwRNaXNzAk1zAkRyBFByb2YVBgI3MQI3MgI3MwI3NAI3NQI3NhQrAwZnZ2dnZ2dkZAIbDxAPFgIfBmdkEBUlCi0tc2VsZWN0LS0ZQW5kYW1hbiAmIE5pY29iYXIgSXNsYW5kcw5BbmRocmEgUHJhZGVzaBFBcnVuYWNoYWwgUHJhZGVzaAVBc3NhbQVCaWhhcgpDaGFuZGlnYXJoDENoaGF0dGlzZ2FyaBZEYWRyYSBhbmQgTmFnYXIgSGF2ZWxpDURhbWFuIGFuZCBEaXUFRGVsaGkDR29hB0d1amFyYXQHSGFyeWFuYRBIaW1hY2hhbCBQcmFkZXNoEUphbW11IGFuZCBLYXNobWlyCkpoYXJraGFuZCAKS2FybmF0YWthIAZLZXJhbGELTGFrc2hhZHdlZXAOTWFkaHlhIFByYWRlc2gLTWFoYXJhc2h0cmEHTWFuaXB1cglNZWdoYWxheWEHTWl6b3JhbQhOYWdhbGFuZAlOZXcgRGVsaGkGT3Jpc3NhC1BvbmRpY2hlcnJ5BlB1bmphYglSYWphc3RoYW4GU2lra2ltClRhbWlsIE5hZHUHVHJpcHVyYQ1VdHRhciBQcmFkZXNoC1V0dGFyYWtoYW5kC1dlc3QgQmVuZ2FsFSUBMAIzMwE1ATYBNwE4ATMBOQIzNAIzNQE0AjEwAjExAjEyAjEzAjE0AjE1AjE2AjE3AjM2AjE4AjE5AjIwAjIxAjIyAjIzAjM4AjI0AjM3AjI1AjI2AjI3AjI4AjI5AjMxAjMwAjMyFCsDJWdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAIdD2QWAgIFDxAPFgYfBAUEbmFtZR8FBQJpZB8GZ2QQFQEFSW5kaWEVAQMxMTIUKwMBZxYBZmQCJQ9kFgICAQ9kFgICAw8QDxYGHwQFBG5hbWUfBQUCaWQfBmcWAh4Ib25jaGFuZ2UFCnNldGNpdHkoKTsQFRIILXNlbGVjdC0IYW1yaXRzYXIJYmFuZ2Fsb3JlCmNoYW5kaWdhcmgHY2hlbm5haQZjb2NoaW4KY29pbWJhdG9yZRFkZWxoaSBbcGl0YW1wdXJhXQ1kZWxoaSBbc291dGhdCWh5ZGVyYWJhZAZqYWlwdXIKamFsbGFuZGhhcghrb3R0YXlhbQhsdWRoaWFuYQltZWxib3VybmUGbXlzb3JlB3BhdGlhbGEPdGlydWNoaXJhcHBhbGxpFRIBMAE2AjI4ATECMjMCMjUCMjEBNAIyNwIzMAIzNgE3AjI2ATUBMgIyOQEzAjIyFCsDEmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAicPZBYCZg9kFgICAQ8QDxYGHwQFBG5hbWUfBQUCaWQfBmdkEBUFCUF1c3RyYWxpYQZDYW5hZGELTmV3IFplYWxhbmQOVW5pdGVkIEtpbmdkb20DVVNBFQUCMTICMzkDMTgxAzI0MAMyNDIUKwMFZ2dnZ2cWAGQCKQ9kFgICAQ8UKwACDxYMHwQFBG5hbWUfBQUCaWQfBmcfA2geE2NhY2hlZFNlbGVjdGVkVmFsdWVkHgRUZXh0ZWQPFCsABRQrAAIPFgYfCQUGTWFzdGVyHgVWYWx1ZQUBMR4IU2VsZWN0ZWRnZGQUKwACDxYGHwkFCEJhY2hlbG9yHwoFATIfC2hkZBQrAAIPFgYfCQUHRGlwbG9tYR8KBQE0HwtoZGQUKwACDxYGHwkFEEdyYWR1YXRlIERpcGxvbWEfCgUBNR8LaGRkFCsAAg8WBh8JBQNQaEQfCgUBNh8LaGRkDxQrAQVmZmZmZhYBBXdUZWxlcmlrLldlYi5VSS5SYWRDb21ib0JveEl0ZW0sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTIuMS4yMTUuNDAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNBYOZg8PFgQeCENzc0NsYXNzBQlyY2JIZWFkZXIeBF8hU0ICAmRkAgEPDxYEHwwFCXJjYkZvb3Rlch8NAgJkZAICDw8WBh8JBQZNYXN0ZXIfCgUBMR8LZ2RkAgMPDxYGHwkFCEJhY2hlbG9yHwoFATIfC2hkZAIEDw8WBh8JBQdEaXBsb21hHwoFATQfC2hkZAIFDw8WBh8JBRBHcmFkdWF0ZSBEaXBsb21hHwoFATUfC2hkZAIGDw8WBh8JBQNQaEQfCgUBNh8LaGRkAisPFCsAAg8WDB8GZx8FBQJpZB8JZR8IZB8DaB8EBQV2YWx1ZWQPFCsADBQrAAIPFgYfCQUdTmF0dXJhbCBhbmQgUGh5c2ljYWwgU2NpZW5jZXMfCgUBMR8LZ2RkFCsAAg8WBh8JBRZJbmZvcm1hdGlvbiBUZWNobm9sb2d5HwoFAjQ3HwtoZGQUKwACDxYGHwkFJEVuZ2luZWVyaW5nIGFuZCBSZWxhdGVkIFRlY2hub2xvZ2llcx8KBQI3NB8LaGRkFCsAAg8WBh8JBRlBcmNoaXRlY3R1cmUgYW5kIEJ1aWxkaW5nHwoFAzE2Mx8LaGRkFCsAAg8WBh8JBS5BZ3JpY3VsdHVyZSwgRW52aXJvbm1lbnRhbCBhbmQgUmVsYXRlZCBTdHVkaWVzHwoFAzE5MB8LaGRkFCsAAg8WBh8JBQZIZWFsdGgfCgUDMjExHwtoZGQUKwACDxYGHwkFCUVkdWNhdGlvbh8KBQMyODYfC2hkZBQrAAIPFgYfCQUXTWFuYWdlbWVudCBhbmQgQ29tbWVyY2UfCgUDMzA3HwtoZGQUKwACDxYGHwkFE1NvY2lldHkgYW5kIEN1bHR1cmUfCgUDMzUyHwtoZGQUKwACDxYGHwkFDUNyZWF0aXZlIEFydHMfCgUDNDMxHwtoZGQUKwACDxYGHwkFJ0Zvb2QsIEhvc3BpdGFsaXR5IGFuZCBQZXJzb25hbCBTZXJ2aWNlcx8KBQM0NjMfC2hkZBQrAAIPFgYfCQUWTWl4ZWQgRmllbGQgUHJvZ3JhbW1lcx8KBQM0NzYfC2hkZA8UKwEMZmZmZmZmZmZmZmZmFgEFd1RlbGVyaWsuV2ViLlVJLlJhZENvbWJvQm94SXRlbSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxMi4xLjIxNS40MCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FhxmDw8WBB8MBQlyY2JIZWFkZXIfDQICZGQCAQ8PFgQfDAUJcmNiRm9vdGVyHw0CAmRkAgIPDxYGHwkFHU5hdHVyYWwgYW5kIFBoeXNpY2FsIFNjaWVuY2VzHwoFATEfC2dkZAIDDw8WBh8JBRZJbmZvcm1hdGlvbiBUZWNobm9sb2d5HwoFAjQ3HwtoZGQCBA8PFgYfCQUkRW5naW5lZXJpbmcgYW5kIFJlbGF0ZWQgVGVjaG5vbG9naWVzHwoFAjc0HwtoZGQCBQ8PFgYfCQUZQXJjaGl0ZWN0dXJlIGFuZCBCdWlsZGluZx8KBQMxNjMfC2hkZAIGDw8WBh8JBS5BZ3JpY3VsdHVyZSwgRW52aXJvbm1lbnRhbCBhbmQgUmVsYXRlZCBTdHVkaWVzHwoFAzE5MB8LaGRkAgcPDxYGHwkFBkhlYWx0aB8KBQMyMTEfC2hkZAIIDw8WBh8JBQlFZHVjYXRpb24fCgUDMjg2HwtoZGQCCQ8PFgYfCQUXTWFuYWdlbWVudCBhbmQgQ29tbWVyY2UfCgUDMzA3HwtoZGQCCg8PFgYfCQUTU29jaWV0eSBhbmQgQ3VsdHVyZR8KBQMzNTIfC2hkZAILDw8WBh8JBQ1DcmVhdGl2ZSBBcnRzHwoFAzQzMR8LaGRkAgwPDxYGHwkFJ0Zvb2QsIEhvc3BpdGFsaXR5IGFuZCBQZXJzb25hbCBTZXJ2aWNlcx8KBQM0NjMfC2hkZAINDw8WBh8JBRZNaXhlZCBGaWVsZCBQcm9ncmFtbWVzHwoFAzQ3Nh8LaGRkAi0PFCsAAg8WBB8DaB8JZWRkFgRmDw8WBB8MBQlyY2JIZWFkZXIfDQICZGQCAQ8PFgQfDAUJcmNiRm9vdGVyHw0CAmRkAjMPFgIeBXN0eWxlBUJtYXJnaW4tYm90dG9tOjE1cHg7bWFyZ2luLWxlZnQ6MTBweDt0ZXh0LWFsaWduOmxlZnQ7ZGlzcGxheTpibG9jaztkGAQFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYLBQ9jYmxJbnFDb3VudHJ5JDAFD2NibElucUNvdW50cnkkMQUPY2JsSW5xQ291bnRyeSQyBQ9jYmxJbnFDb3VudHJ5JDMFD2NibElucUNvdW50cnkkNAUPY2JsSW5xQ291bnRyeSQ0BQlkZGxhd2FyZHMFDnJkb21ham9yYXdhcmRzBQ5yZG9taW5vcmF3YXJkcwUJY2JFbWFpbE1lBQdjYlNtc01lBQ5yZG9taW5vcmF3YXJkcw8UKwACZWVkBQ5yZG9tYWpvcmF3YXJkcw8UKwACZQUBMWQFCWRkbGF3YXJkcw8UKwACZQUBMWSR/NXI+/+Tnusd5yLcJghjB00dca3ddWSTNLPIc0QV1w==" />
-</div>
-
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAFNOpbq4X2LHEoptWmqjka4ax+c2EYGT16XI3syClAV4nimy+sGeGJPvrhnPIUDixSDSLU1Bmq52nlK9N9e4mf0NUnb4mbFcCb/Jb6XgpwA4t0be84jzbT46S++FL3h3D60OVCDYOCfREGUySpRkox8lMQY0/Emk1mrp8Omz3KeBf8hqsQXbyJl5mIk0pyygkcayNCg2Oz/H80ZpzJJ36YXaZEZEkPQEsyVbyiNuxNKoDQ9bVuVgVVjQK1vUORCPIdBDyFaPh8qjjS7rXrFVk+Ybp05gvhalcUL1qFba5517JwrMlXpv03esrxHoPHkg68pLztwFGvYB07E+Xhvme5zEr9OFDHcxkCOHL2ydDvUH1+pIGujOplubvpuqMkHSZHm40uBrbzjWNHKvJe9Dr/v1jdhgsX8HPkTxnU9aiLAspIqWYmACgWw1C96+68k9r3wpGmWZhNgWVbAbIownamsBZoeTf5drcSgBNDylJa/h7aw3547TLuU8WmqmldBhwhl2FutztSE13sv/tNOJIjH7Hsd560VefYOMfPe09jdyr+QtBbnMLw6roBbolbMiMj12XXNZ2eV+dulvvKM+U8TpXC3RZVF5c98a71jEayIvcJ/71K5Sb8aDf0JEyP3oOduvdd3OIdCGCyz2NxCBezVA1rHfpHsDY8BDfRYQnLhz0Zts0pAAv05c9lSZNwHNFXPOZN7OIFYYzQ1easqTQW+1KFGSBAxau8G3m7RX7QCugVng5YhDUGhFCSVu6sSmeVcf9c/z9KU6RIkB+StxZZab5EdLUD1/gsBx3voFaZFZyRd7M7B3VNkic+AKXdhdndHkSqpkhurRNxyo4FVDxsBVAUSdUwiSAY4l7T/qKqZk2tuQQaOrQqZWlnvr07bzb5lQuRip8eSK/gVzvPl/+ZZhzzMFSH0oY+8MyKn3DXemeMX02wvRgNwD+AdrmbypAzbVwKh/Gq95rsipAt/zSGTZxxEQ2YhOYxZGPd6tjOwUoXsQfapTU9jh9wgvLld6f2jVevPd1kyEXALmv9zIDNciPzr/B4SSjuaB0Sr2VxuhVdgWgPHqQoGZQm1Gqhcoxy7FC//NPQAihc2F1PbAcdhB5e/ik/oWZbCjmzpfpuTRNmGvbtrMWbtlELJiFJG4FPb980Ofohokb+P3cAONkOkvJiSnU3v33aTRM0EY8XmrGEtNy6I1P+qKbigiRfBCtRL0FJCHhVcM/MgKZqATzujXd7wwHXwJXcMcfqhUmjkRD2iMtCWuAkABnw/YzW1fwKOUBhx91uQvKEQR8RwksXa8qaAvx0l9SHtopXeKICAI4K3SD7H6cVhmpyzfY/RLhI+KnKyZSVq68ZlLjzEQTYZGgtl7CC9SKOmIXucCwEE/2Mqct5+Mgo12q6e9DMSQG83//2Im4u0tsdsQLDDCCDdl2usrUOxvuWshmNq/O8J0/nsGbaEplgRHQz0KytB6HqFMtKpjjBQpKgLlhBZb6xKMyCVmsYye+6wYABCyGx5ezCsptoolC5onP5FY9LMjZOLbM89tRlg0EgC+6hMTGinxxi2NRSX8llRNbjHNw4V9ix7x+SdRMO8g43oQ68HPJUVugb5vGYs70+g637D5FlS2bpWj1Tk0a/nleCOXBSt+LLcbjP/HDA86TxGnG3/vQc32xH+r375eAZLSXh7cTjVHFKblmMKw6vkRuVLGv62bi6hs5S2VWr2cNpDn7YR8ncCGv//T2p3l9s104n8iTC3FH3nra93OB915opICXNmZSHCQOJTTuYPNBku68Z7YvQgFSSy7yB8HxqblSxZ+1+Ac" />
-</div>
-                <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdatePanel1','UpdatePanel1','trdominorawardsPanel','','tradJMSU','radJMSU'], ['cblInqCountry','cblInqCountry','rdomajorawards',''], [], 90, '');
-//]]>
-</script>
-
-                <!-- 2012.1.215.40 --><div id="radJMSU">
-	<span id="radJM" style="display:none;"></span>
-</div>
-                <div id="ajlp" style="display:none;">
-	
-                
-</div>
-                <div class="wrapper">
+        <div class="wrapper">
             
                     <div class="pageContent">
                         <div id="register">
@@ -204,7 +147,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                             <div class="formRow">
                                                 <div class="fieldContainer">
                                                     <div class="field" style="margin-top: 14px;">
-                                                    <select name="ddltitle" id="ddltitle" class="inputForm" align="left" style="width:50px;">
+                                                    <select name="title" id="title" class="inputForm" align="left" style="width:50px;">
 	<option value="71">Mr</option>
 	<option value="72">Mrs</option>
 	<option value="73">Miss</option>
@@ -217,22 +160,16 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                                 </div>
                                                 
                                                 <div class="fieldContainer" id="myFormControl2">
-                                                    <div class="fieldLabel">First name*
-                                                        <span class="im" style="width: 16px; display: inline;">
-                                                        <span id="RequiredFieldValidator1" title="required first name" style="display:none;"><img id="imgfirstname" title="required first name" alt="required first name" src="images/crossRed16.gif" /></span></span>
-                                                        </div>
+                                                    <div class="fieldLabel">First name*</div>
                                                     <div class="field">
-                                                        <input name="txtfirstname" type="text" maxlength="100" id="txtfirstname" class="inputReg" style="width:120px;" />
+                                                        <input name="firstname" type="text" maxlength="100" id="firstname" class="inputReg" style="width:120px;" />
                                                         </div>
                                                 </div>
                                             
                                                 <div class="fieldContainer" id="myFormControl2">
-                                                    <div class="fieldLabel">Last Name*
-                                                        <span class="im" style="width: 16px; display: inline;">
-                                                        <span id="RequiredFieldValidator2" title="required last name" style="display:none;"><img id="imglastname" title="required last name" alt="required last name" src="images/crossRed16.gif" /></span></span>                                        
-                                                    </div>
+                                                    <div class="fieldLabel">Last Name*</div>
                                                     <div class="field">
-                                                        <input name="txtlastname" type="text" maxlength="100" id="txtlastname" class="inputReg" style="width:150px;" />
+                                                        <input name="lastname" type="text" maxlength="100" id="lastname" class="inputReg" style="width:150px;" />
                                                         </div>
                                                 </div>
                                                 
@@ -241,35 +178,26 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                             <div class="formRow">
                                             
                                                 <div class="fieldContainer" id="myFormControl3">
-                                                    <div class="fieldLabel">Date of birth*
-                                                        <span id="RequiredFieldValidator4" title="required date of birth" style="display:none;"><img id="imgfirstname" title="required date of birth" alt="required date of birth" src="images/crossRed16.gif" /></span>
-                                                        <span id="RequiredFieldValidator6" title="required date of birth" style="display:none;"><img id="imgfirstname" title="required date of birth" alt="required date of birth" src="images/crossRed16.gif" /></span>                                        
-                                                    </div>
-                                                    <div class="field">
-                                                        <input name="txtdob" type="text" value="dd/mm/yyyy" maxlength="100" id="txtdob" class="inputReg" onchange="changedate();" style="width:160px;" />
-                                                        <a href='javascript:popUpCalendar(document.forms[0].txtdob, document.forms[0].txtdob, "dd/mm/yyyy")' title="select the date">
-                                                        <img id="calendar" src="images/cal.gif" width="16" height="16" border="0" align="middle" style="margin-top: -12px" alt="cal" /></a>
+                                                    <div class="fieldLabel">Date of birth
                                                         </div>
+                                                    <div class="field">                                                        
+                                                        <input name="dob" type="text" value="dd/mm/yyyy" maxlength="100" id="datepicker" class="inputReg" style="width:160px;" />
+                                                    </div>
                                                 </div>
                                                 
                                                 <div class="fieldContainer" id="myFormControl6">
-                                                    <div class="fieldLabel">Mobile no.
-                                                        <span class="im" style="width: 16px; display: inline;">
-                                                        <span id="RequiredFieldValidator5" title="required mobile no" style="display:none;"><img id="imgphone" title="required mobile no" alt="required mobile no" src="images/crossRed16.gif" /></span>
-                                                        <span id="regMobile" title="invalid mobile" style="display:none;"><img id="imgregmobile" title="invalid mobile" alt="invalid mobile" src="images/crossRed16.gif" /></span></span>
-                                                    </div>
+                                                    <div class="fieldLabel">Mobile no. </div>
                                                     <div class="field">
-                                                        <input name="txtmobileno" type="text" maxlength="50" id="txtmobileno" class="inputReg" style="width:150px;" />
+                                                        <input name="mobileno" type="text" maxlength="50" id="mobileno" class="inputReg" style="width:150px;" />
                                                     </div>
                                                 </div>
                                                 
                                             </div>    
-                                            <div class="formRow">
-                                                
+                                            <div class="formRow">                                                
                                                 <div id="myFormControl11" class="fieldContainer">
                                                     <div class="fieldLabel">Street Address</div>
                                                     <div class="field">
-                                                        <input name="txtstreetaddress" type="text" id="txtstreetaddress" class="inputReg" style="width:180px;" />
+                                                        <input name="streetaddress" type="text" id="streetaddress" class="inputReg" style="width:180px;" />
                                                     </div>
                                                 </div>
                                                 
@@ -278,15 +206,15 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                                         <span id="ReqStudentstate" title="select state" style="display:none;"><img id="imgphone" title="select state" alt="select state" src="images/crossRed16.gif" /></span>
                                                     </div>
                                                     <div class="field">
-                                                        <select name="ddlStudentState" id="ddlStudentState" class="inputReg" align="left" style="width:158px;">
-	<option value="0">--select--</option>
+                                                        <select name="state" id="state" class="inputReg" align="left" style="width:158px;">
+	<option value="0">--select--</option>        
 	<option value="33">Andaman &amp; Nicobar Islands</option>
 	<option value="5">Andhra Pradesh</option>
 	<option value="6">Arunachal Pradesh</option>
 	<option value="7">Assam</option>
 	<option value="8">Bihar</option>
 	<option value="3">Chandigarh</option>
-	<option value="9">Chhattisgarh</option>
+	<option value="9">Chattisgarh</option>
 	<option value="34">Dadra and Nagar Haveli</option>
 	<option value="35">Daman and Diu</option>
 	<option value="4">Delhi</option>
@@ -316,8 +244,8 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
 	<option value="31">Uttar Pradesh</option>
 	<option value="30">Uttarakhand</option>
 	<option value="32">West Bengal</option>
-
-</select>
+        <option value="34">Other</option>
+                                                        </select>
                                                         </div>
                                                 </div>
                                                 
@@ -325,85 +253,40 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                            <div class="formRow">
                                            
                                                 <div id="myFormControl12" class="fieldContainer">
-                                                    <div class="fieldLabel">City of residence
-                                                        <span class="im" style="width: 16px; display: inline;">
-                                                        <span id="reqStudentCity" title="required city" style="display:none;"><img id="imgphone" title="required city" alt="required city" src="images/crossRed16.gif" /></span></span>
-                                                    </div>
+                                                    <div class="fieldLabel">City of residence  </div>
                                                     <div class="field">
-                                                        <input name="txtStudentCity" type="text" maxlength="50" id="txtStudentCity" class="inputReg" style="width:180px;" />
-                                                        
+                                                        <input name="city" type="text" maxlength="50" id="city" class="inputReg" style="width:180px;" />
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="fieldContainer">
                                                     <div class="fieldLabel">Email*
-                                                        <span class="im" style="width: 16px; display: inline;">
-                                                        <span id="RequiredFieldValidator3" title="required email" style="display:none;"><img id="imgemail" title="required email" alt="required email" src="images/crossRed16.gif" /></span>
-                                                        <span id="RegularExpressionValidatoremailid" title="invalid emailid" style="display:none;"><img id="imgemail" title="invalid email" alt="invalid email" src="images/crossRed16.gif" /></span></span>
-                                                    </div>
+                                                         </div>
                                                     <div class="field">
-                                                        <input name="txtemailid" type="text" maxlength="100" id="txtemailid" class="inputReg" style="width:150px;" />
+                                                        <input name="emailid" type="text" maxlength="100" id="emailid" class="inputReg" style="width:150px;" />
                                                     </div>
                                                 </div>
                                                 
                                             </div>                  
                                     </fieldset>
-                                    </div>                   
-            <div id="divStateCity" style="width: 100%;">
-                                    <h3 class="heading_red">Select our nearest branch*</h3>
-                                    <fieldset>                            
-                                        <div id="myFormControl8" class="formRow">
-                                            <div class="fieldContainer" style="margin-left: 0px;">Branch
-                                                <span id="RequiredFieldValidator7" title="select branch" style="display:none;"><img id="imgbranch" title="select branch" alt="select branch" src="images/crossRed16.gif" /></span>
-                                            </div>
-                                            <div class="fieldLabel"></div>
-                                            <div class="field" style="margin-top: -10px;">
-                                                <select name="ddlcity" id="ddlcity" class="inputReg" align="left" onchange="setcity();" style="width:185px;">
-	<option value="0">-select-</option>
-	<option value="6">amritsar</option>
-	<option value="28">bangalore</option>
-	<option value="1">chandigarh</option>
-	<option value="23">chennai</option>
-	<option value="25">cochin</option>
-	<option value="21">coimbatore</option>
-	<option value="4">delhi [pitampura]</option>
-	<option value="27">delhi [south]</option>
-	<option value="30">hyderabad</option>
-	<option value="36">jaipur</option>
-	<option value="7">jallandhar</option>
-	<option value="26">kottayam</option>
-	<option value="5">ludhiana</option>
-	<option value="2">melbourne</option>
-	<option value="29">mysore</option>
-	<option value="3">patiala</option>
-	<option value="22">tiruchirappalli</option>
-
-</select>
-                                                <input type="hidden" name="test" id="test" value="0" />
-                                                <div style="display: none;">
-                                                    <input type="hidden" name="hdncity" id="hdncity" />
-                                                    <input type="hidden" name="hdnselectedindex" id="hdnselectedindex" />
-                                                    <input type="hidden" name="hdncityid" id="hdncityid" />
-                                                </div>                                
-                                            </div>
-                                            
-                                            <input type="hidden" name="hdnfromvisit" id="hdnfromvisit" value="0" />
-                                        </div>
-                                    <div style="width:10px; height:5px; clear:both;"></div>
-                                    </fieldset>
-                                    
-                                    </div>
+                                    </div>                
+         
                                     
                                     <div><h3 class="heading_red">Study preferences</h3>
                                     <fieldset>                        	                            
-                                        <p align="left" style="margin-left: 10px;">Preferred country <span>[you may select multiple destinations]</p>
+                                        <p align="left" style="margin-left: 10px;">Preferred country <span>[you may select multiple destinations]</span></p>
                                         <div class="formRow">
                                             <div class="fieldContainer" style="margin-left: -10px;">
                                                 <div id="UpdatePanel1">
 	
-                                                <table id="cblInqCountry" class="ckbBx" style="width:500px;">
+                                                <table id="interestedCountry" class="ckbBx" style="width:500px;">
 		<tr>
-			<td><input id="cblInqCountry_0" type="checkbox" name="cblInqCountry$0" value="12" /><label for="cblInqCountry_0">Australia</label></td><td><input id="cblInqCountry_1" type="checkbox" name="cblInqCountry$1" value="39" /><label for="cblInqCountry_1">Canada</label></td><td><input id="cblInqCountry_2" type="checkbox" name="cblInqCountry$2" value="181" /><label for="cblInqCountry_2">New Zealand</label></td><td><input id="cblInqCountry_3" type="checkbox" name="cblInqCountry$3" value="240" /><label for="cblInqCountry_3">United Kingdom</label></td><td><input id="cblInqCountry_4" type="checkbox" name="cblInqCountry$4" value="242" /><label for="cblInqCountry_4">USA</label></td>
+			<td><input id="interestedCountry_0" type="checkbox" name="interestedCountry0" value="12" />
+                            <label for="interestedCountry_0">Australia</label></td>
+                        <td><input id="interestedCountry_1" type="checkbox" name="interestedCountry1" value="39" /><label for="interestedCountry_1">Canada</label></td>
+                        <td><input id="interestedCountry_2" type="checkbox" name="interestedCountry2" value="181" /><label for="interestedCountry_2">New Zealand</label></td>
+                        <td><input id="interestedCountry_3" type="checkbox" name="interestedCountry3" value="240" /><label for="interestedCountry_3">United Kingdom</label></td>
+                        <td><input id="interestedCountry_4" type="checkbox" name="interestedCountry4" value="242" /><label for="interestedCountry_4">USA</label></td>
 		</tr>
 	</table>
                                                 
@@ -411,80 +294,23 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
                                             </div>
                                         </div>
                                         
-                                        <div style="width:10px; height:5px; clear:both;"></div>
-                                   
-                                   
-                                                          
-                                    <div id="Div2">
-                                        <div style="width: 60px; display: block;">Awards</div>
-                                        <div style="display: block; float: left; width: 250px; margin-left: 10px; margin-bottom: 10px">
-                                        <div id="ddlawards" class="RadComboBox RadComboBox_Default" style="width:250px;white-space:normal;">
-	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
-		<tr class="rcbReadOnly">
-			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="ddlawards" type="text" class="rcbInput" id="ddlawards_Input" value="" readonly="readonly" /></td>
-			<td class="rcbArrowCell rcbArrowCellRight"><a id="ddlawards_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
-		</tr>
-	</table>
-	<div class="rcbSlide" style="z-index:6000;"><div id="ddlawards_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div class="rcbScroll rcbWidth" style="width:100%;"><ul class="rcbList" style="list-style:none;margin:0;padding:0;zoom:1;"><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Master</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Bachelor</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Diploma</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Graduate Diploma</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />PhD</li></ul></div></div></div><input id="ddlawards_ClientState" name="ddlawards_ClientState" type="hidden" />
-</div>
-                                        </div>
-                                    </div>
-                                    <div style="width:10px; height:5px; clear:both;"></div>
-                                <div style="overflow: hidden;">
-                                    <div style="width: 50%;float:left;">
-                                        <span style="text-align:left; display:block; margin-left: 10px;">Major area</span>
-                                            <div align="left" style="margin-left: 10px;"><div id="rdomajorawards" class="RadComboBox RadComboBox_Default" style="width:250px;white-space:normal;">
-	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
-		<tr class="rcbReadOnly">
-			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="rdomajorawards" type="text" class="rcbInput" id="rdomajorawards_Input" value="" readonly="readonly" /></td>
-			<td class="rcbArrowCell rcbArrowCellRight"><a id="rdomajorawards_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
-		</tr>
-	</table>
-	<div class="rcbSlide" style="z-index:6000;"><div id="rdomajorawards_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div class="rcbScroll rcbWidth" style="width:100%;"><ul class="rcbList" style="list-style:none;margin:0;padding:0;zoom:1;"><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Natural and Physical Sciences</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Information Technology</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Engineering and Related Technologies</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Architecture and Building</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Agriculture, Environmental and Related Studies</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Health</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Education</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Management and Commerce</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Society and Culture</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Creative Arts</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Food, Hospitality and Personal Services</li><li class="rcbItem "><input type="checkbox" class="rcbCheckBox" />Mixed Field Programmes</li></ul></div></div></div><input id="rdomajorawards_ClientState" name="rdomajorawards_ClientState" type="hidden" />
-</div></div>
-                                    </div>
+                                        <div style="width:10px; height:5px; clear:both;"></div>                                  
+                                    <div id="Div2" style="padding-left: 10px;">
+                                        <div style="width: 280px; display: block;"><p>Qualifications [you may specify multiple awards achieved]</p></div>
+                                        <div id="ddlawards" class="RadComboBox RadComboBox_Default" style="float:left">
+                                            <textarea id="qualifications" name="qualifications" style="margin: 0px; width: 385px; height: 87px;"></textarea>
+                                        </div>                                     
                                     <br />
-                                    <div style="width: 50%; float: left; margin-top: -14px;">
-                                        <span style="text-align:left; display:block;">Minor area</span>
-                                            <div align="left">
-                                        <span id="rdominorawardsPanel"><div id="rdominorawards" class="RadComboBox RadComboBox_Default" style="width:250px;white-space:normal;">
-	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
-		<tr class="rcbReadOnly">
-			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="rdominorawards" type="text" class="rcbInput" id="rdominorawards_Input" value="" readonly="readonly" /></td>
-			<td class="rcbArrowCell rcbArrowCellRight"><a id="rdominorawards_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
-		</tr>
-	</table>
-	<div class="rcbSlide" style="z-index:6000;"><div id="rdominorawards_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div class="rcbScroll rcbWidth" style="width:100%;"></div></div></div><input id="rdominorawards_ClientState" name="rdominorawards_ClientState" type="hidden" />
-</div></span></div>
-                                    </div>
-                                </div>
-                                    
-                                <div id="studentStateCity" style="display: none; width: 250px; margin-left: 30px;" class="fl"></div>
-                                <div class="gap5 cl"></div>
-                                
+                                </div>                                   
                                 <br />
-                                <input type="hidden" name="hdndob" id="hdndob" value="0" />
-                                <div id="divEmailSms" style="margin-bottom:15px;margin-left:10px;text-align:left;display:block;" align="left">
-                                    <div style="padding-top: 5px;">
-                                        <span class="ckbBx"><input id="cbEmailMe" type="checkbox" name="cbEmailMe" checked="checked" /><label for="cbEmailMe"> Email me the upcoming interviews</label></span>
-                                    </div>
-                                    <div>
-                                        <span class="ckbBx"><input id="cbSmsMe" type="checkbox" name="cbSmsMe" checked="checked" /><label for="cbSmsMe"> SMS me the upcoming interviews</label></span>
-                                    </div>
-                                </div>
-                                <div id="myFormControl10" style="display: block; clear: both; margin-top: 10px; margin-left: 10px; padding-bottom: 5px;">
+                                <div id="myFormControl10" style="display: block; clear: both; margin-top: 20px; margin-left: 10px;padding-top: 10px; padding-bottom: 5px;">
                                     <div align="left">
-                                        <input type="submit" name="btnsubmit" value="Submit" onclick="" id="btnsubmit" class="btn" />
-                                        <img id="imgwaitreg" style="display: none" alt="" src="images/Stprogress.gif" />
+                                        <input type="submit" name="btnsubmit" value="Submit" onclick="" id="btnsubmit" class="btn" />                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="myData" style="display: none;">
-                        
-                    </div>
-                            
+                    </div>                  
                 </div>          
        
 </form>
@@ -501,33 +327,7 @@ Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdate
         <!-- Right Content Start From Here -->
         <div id="rt_container">
               <?php require 'Views/destinations_carousel.phtml';?>
-            
-            <div class="credentials">        	
-                <a href="#" class="prev"></a>
-                <div class="credential_scoller">            
-                <div class="jCarouselLite">
-                    <ul>
-                        <li><img src="images/airc_logo.png" alt="American International Recruitment Council" /></li>
-                    <li><img src="images/evisa_logo.png" alt="eVisa" /></li>              
-                    <li><img src="images/nez_specialist_logo.png" alt="New Zealand Education Specialist Agent" /></li>                        
-                    <li><img src="images/aaeri_logo.png" alt="Education In Australia" /></li>
-                    <li><img src="images/aus_buss_award_logo.png" alt="Australian Business Award Winner 2010" /></li>
-                    <li><img src="images/brw_award.png" alt="BRW Fast 100 Award" /></li>
-                    <li><img src="images/coco_logo.png" alt="Company Owned Company Operated" /></li>
-                    </ul>
-                </div>
-                </div>
-                <a href="#" class="next"></a>
-            </div>
-            
-            <!-- University Banner Script Start From Here -->
-        <div style="overflow: hidden;">
-        <!--<img src="images/adv_banner_2.jpg" width="301" height="88" alt="free admission in oversease, all cources consultants" style="border: none; margin-top: 15px;" />-->
-
-        <div style="border: none; margin-top: 15px;"><iframe src="university_banners.html" width="301" height="88" frameborder="0" scrolling="no"></iframe></div>
-		<img src="images/adv_banner_1.jpg" width="301" height="87" alt="" style="border: none; margin-top: 15px;" />
-        </div>
-        <!-- University Banner Script End Here -->
+              <?php require 'Views/twitter_feed.phtml'?> 
         </div>
         <!-- Right Content End Here -->
         
