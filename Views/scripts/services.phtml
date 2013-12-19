@@ -1,4 +1,4 @@
-<?php require('Views/header_'.$view->headerTitle.'.phtml');?>
+<?php require('Views/header.phtml');?>
 
 <!-- Content Start From Here -->
 <div id="content_container">
@@ -95,4 +95,10 @@
 </div>
 <!-- Content End Here -->
 
+<script type="text/javascript">
+     $(document).ready(function() {
+       $('#smoothmenu1').find(".active").removeClass('active');
+       $("a[title='Services']").addClass('active');                                                   
+     });
+ </script>
 <?php include_once 'Views/footer.phtml'; ?>                                                

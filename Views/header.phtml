@@ -7,20 +7,31 @@
                     <meta name="Description" content="ISRA consultants provide best consultant services for overseas education. It helps students to get admission in  universities in Australia, Canada, New Zealand, UK, USA.">
                         <title>Study in UK | Study in New Zealand | Study in The USA | Study in Canada | Study in Australia | Overseas Education | Study in Overseas | Study Consultants</title>
                         
-                        <link href="css/home.css" type="text/css" rel="stylesheet">
-                            <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css">
-
-                                <script type="text/javascript" src="js/jquery.min.js"></script>
-                                <script type="text/javascript" src="js/ddsmoothmenu.js"></script>
-
+                        <link href="css/<?php echo $view->headerTitle?>.css" type="text/css" rel="stylesheet">
+                 
+                            <script type="text/javascript" src="js/jquery.min.js"></script>
+                              <script type="text/javascript" src="js/ddsmoothmenu.js"></script>                        
                                 <script type="text/javascript" src="js/jquery-latest.pack.js"></script>
                                 <script type="text/javascript" src="js/jcarousellite_1.0.1.js"></script>
                                 <script type="text/javascript" src="js/jquery.innerfade.js"></script>
 
                                 <script type="text/javascript" src="js/common.js"></script>
                                 <script src="js/thickbox.js" type="text/javascript"></script>
-                                <link href="css/thickbox.css" rel="stylesheet" type="text/css"/>                                    
-                                    <script type="text/javascript" src="js/oceanic.js"></script>
+                                <link href="css/thickbox.css" rel="stylesheet" type="text/css"/>  
+                                                              
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46595119-1', 'international-student.in');
+  ga('send', 'pageview');
+
+</script>
+
 
                                     <!-- include Cycle plugin -->
                                     <script type="text/javascript" src="https://filemasbayu.googlecode.com/files/jquery.cycle.all.latest.js"></script>
@@ -59,10 +70,10 @@
                                         <!-- Header Start From Here -->
                                         <div id="header">
 
-                                            <?php require('menu.phtml') ?>
-                                            <?php require('banner_home.phtml') ?>
-                                            <?php require('testimonials.phtml') ?>
-
+                                            <?php require('menu.phtml') ?>                                            
+                                            <?php require('banner_'.$view->bannerTitle.'.phtml');?>  
+                                            <?php if($view->bannerTitle == 'home'){
+                                                require('testimonials.phtml') ?>
                                             <!-- Banner Bottom Start From Here -->
                                             <div id="banner_bottom">&nbsp;</div>
                                             <!-- Banner Bottom End Here -->
@@ -72,7 +83,8 @@
                                                 <div class="img"><img src="images/free_img.jpg" width="301" height="22" alt="all are services are FREE of charge" align="right"></div>
                                             </div>
                                             <!-- Liner Background End Here -->
-
+                                           
+                                            <?php } ?>  
 
                                         </div>
                                         <!-- Header End Here -->

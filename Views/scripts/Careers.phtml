@@ -1,4 +1,4 @@
-<?php require('Views/header_'.$view->headerTitle.'.phtml');?>
+<?php require('Views/header.phtml');?>
 <!-- Content Start From Here -->
 <div id="content_container">
 	
@@ -27,7 +27,7 @@
                     <br /><br />
                     <span class="heading">Work with oceanic consultants</span>
                     <br />
-                    We're looking for bright, enthusiastic, self-starting people who want to work in an exciting, fast-paced environment using the latest technology and products. If you fit the job description, or have a good customer service background and are looking for an exciting career opportunity with a rapidly expanding service oriented company. <a class="thickbox" href="CurrentOpening.aspx?KeepThis=true&TB_iframe=true&height=600&width=500">click here</a> to view current job opportunities.
+                    We're looking for bright, enthusiastic, self-starting people who want to work in an exciting, fast-paced environment using the latest technology and products. If you fit the job description, or have a good customer service background and are looking for an exciting career opportunity with a rapidly expanding service oriented company. <a class="thickbox" href="#">click here</a> to view current job opportunities.
                     <br /><br />
                     <span class="heading">To Apply</span>
                     <br />
@@ -77,6 +77,11 @@
     
 </div>
 <!-- Content End Here -->
-
+<script type="text/javascript">
+     $(document).ready(function() {
+       $('#smoothmenu1').find(".active").removeClass('active');
+       $("a[title='Work With Us']").addClass('active');                                                   
+     });
+ </script>
 
 <?php include_once 'Views/footer.phtml'; ?>                                                

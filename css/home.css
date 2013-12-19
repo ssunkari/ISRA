@@ -402,7 +402,7 @@ h2, h4 {
 	border: solid 0px #000;
 	-webkit-border-radius: 10px 20px 30px 20px;
         border-radius: 10px 10px 10px 10px;
-        background:rgb(222, 222, 222);
+        background:#f6f6f6;
 	overflow: hidden;
 	position: relative;
 }
@@ -624,20 +624,111 @@ overflow:hidden;
     font-size: 16px;
     padding: 12px 0px 0px 5px;
 }
-#header-carousel-head-common p{
-    color:#c12121;
-    font-size: 20px!important;
-    line-height: 1px!important;
-    font-family: cursive;
-    alignment-adjust: text-after-edge;
-    padding: -7px 0px 0px -60px;
+
+.new-sidebar-blurb {
+position: relative;
+margin-top:11px;
 }
-#header-carousel-body-common p
-{
-    
-    alignment-adjust: text-after-edge;
-    font-family: Helvetica;
-    font-style: italic;
-    font-size: 12px;
-    padding: -10px 0px 0px -60px;
+
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 300px;
+height: 7px;
+font-size: 1px;
+}
+
+.rbtop {
+background: url("../images/sidebar-top-right-curve.gif") no-repeat top right;
+}
+
+.rbtop div {
+background: url("../images/sidebar-top-left-curve.gif") no-repeat top left;
+}
+
+.rbtop div span {
+border-top: 1px solid #d2d2d2;
+display: block;
+margin: 0 6px;
+background: #F6F6F6;
+height: 6px;
+}
+
+.rbbot {
+background: url("../images/sidebar-bottom-right-curve.gif") no-repeat bottom right;
+}
+
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 300px;
+height: 7px;
+font-size: 1px;
+}
+
+.rbbot div {
+background: url("../images/sidebar-bottom-left-curve.gif") no-repeat bottom left;
+}
+
+.rbbot div span {
+border-bottom: 1px solid #D6D6D6;
+display: block;
+margin: 0 6px;
+height: 6px;
+background: #F6F6F6;
+}
+
+.sidebar-content {
+border-left: 1px solid #c9c9c9;
+border-right: 1px solid #c9c9c9;
+background: #f6f6f6;
+padding: 12px 8px 0;
+overflow: hidden;
+_height: 1%;
+width: 282px;
+}
+.sidebar-child-blurb {
+border-bottom: 1px solid #e4e4e4;
+margin-bottom: 7px;
+padding: 0 0 14px;
+}
+
+.customer-speaks h2 {
+background: url("../images/bg-customer-speaks-h2.gif") no-repeat;
+color: #656565;
+font-size: 18px;
+padding-bottom: 20px;
+padding-left: 8px;
+margin-bottom: 10px;
+}
+
+.customer-speaks-img {
+border: 1px solid #dbdbdb;
+background: #f5f5f5;
+padding: 5px;
+float: left;
+}
+.customer-speaks h5 {
+font-weight: bold;
+font-size: 16px;
+margin-bottom: 5px;
+color: #656565;
+}
+
+.h5-helpnote {
+font-size: 12px;
+font-weight: normal;
+color: #808080;
+}
+
+.customer-speaks-blurb {
+color: #808080;
+font-size: 13px;
+padding: 0px 8px 9px 70px;
+line-height: 18px;
+}
+
+.icon-top{    
+padding: 20px 10px 5px 32px;
+ background: url("../images/icon-quote-top.gif") no-repeat left top;   
+}
+
+.icon-bottom{
+ background: url("../images/icon-quote-bottom.gif") no-repeat left top;   
 }

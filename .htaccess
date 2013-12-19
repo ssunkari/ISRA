@@ -1,3 +1,5 @@
+SetEnv APPLICATION_PATH .
+
 RewriteEngine On 
 RewriteBase / 
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
