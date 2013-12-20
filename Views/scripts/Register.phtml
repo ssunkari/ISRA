@@ -115,7 +115,7 @@ div.mainForm label
     <!-- Liner Background Start From Here -->
     <div id="liner_bg_container">
         <div class="liner_bg">
-            <div class="breadcrumb"><a href="index.html" title="Home">Home</a>><span>Free Registration</span></div>
+            <div class="breadcrumb"><a href="index.php" title="Home">Home</a>><span>Free Registration</span></div>
             <div class="img"><img src="images/free_img.jpg" width="301" height="22" alt="all are services are FREE of charge" align="right" /></div>
         </div>
     </div>
@@ -133,14 +133,16 @@ div.mainForm label
    				<table border="0" cellpadding="5" cellspacing="0" width="556">
                 <tr>  
                 <td>
-                <form method="post" action="<?php echo $_SERVER["PHP_SELF"]?>" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+   <form action="" method="post" id="register">
         <div class="wrapper">
             
                     <div class="pageContent">
                         <div id="register">
                             <div class="content" style="background-color: #fff; margin-bottom: 5px;">
                                 <span style="font-size: 11px;">Please provide us the following details and we will call you as soon as possible.</span>
-                                
+                                <br/> <span style="font-size: 12;color:red">
+                                        <?php echo $view->validationErrors;?>
+                                    </span>
                                 <div><h3 class="heading_red">Personal Details</h3>
                                     <fieldset>
                                         
@@ -279,14 +281,14 @@ div.mainForm label
                                             <div class="fieldContainer" style="margin-left: -10px;">
                                                 <div id="UpdatePanel1">
 	
-                                                <table id="interestedCountry" class="ckbBx" style="width:500px;">
+                                                <table id="preferredCountry" class="ckbBx" style="width:500px;">
 		<tr>
-			<td><input id="interestedCountry_0" type="checkbox" name="interestedCountry0" value="12" />
-                            <label for="interestedCountry_0">Australia</label></td>
-                        <td><input id="interestedCountry_1" type="checkbox" name="interestedCountry1" value="39" /><label for="interestedCountry_1">Canada</label></td>
-                        <td><input id="interestedCountry_2" type="checkbox" name="interestedCountry2" value="181" /><label for="interestedCountry_2">New Zealand</label></td>
-                        <td><input id="interestedCountry_3" type="checkbox" name="interestedCountry3" value="240" /><label for="interestedCountry_3">United Kingdom</label></td>
-                        <td><input id="interestedCountry_4" type="checkbox" name="interestedCountry4" value="242" /><label for="interestedCountry_4">USA</label></td>
+			<td><input id="preferredCountry_0" type="checkbox" name="preferredCountry0" value="Australia" />
+                            <label for="preferredCountry_0">Australia</label></td>
+                        <td><input id="preferredCountry_1" type="checkbox" name="preferredCountry1" value="Canada" /><label for="preferredCountry_1">Canada</label></td>
+                        <td><input id="preferredCountry_2" type="checkbox" name="preferredCountry2" value="New Zealand" /><label for="preferredCountry_2">New Zealand</label></td>
+                        <td><input id="preferredCountry_3" type="checkbox" name="preferredCountry3" value="United Kingdom" /><label for="preferredCountry_3">United Kingdom</label></td>
+                        <td><input id="preferredCountry_4" type="checkbox" name="preferredCountry4" value="USA" /><label for="preferredCountry_4">USA</label></td>
 		</tr>
 	</table>
                                                 
@@ -305,9 +307,9 @@ div.mainForm label
                                 <br />
                                 <div id="myFormControl10" style="display: block; clear: both; margin-top: 20px; margin-left: 10px;padding-top: 10px; padding-bottom: 5px;">
                                     <div align="left">
-                                        <input type="submit" name="btnsubmit" value="Submit" onclick="" id="btnsubmit" class="btn" />                                        
+                                        <input type="submit" name="submit" value="submit" id="btnsubmit" class="btn" />                                        
                                     </div>
-                                </div>
+                                </div>                            
                             </div>
                         </div>
                     </div>                  

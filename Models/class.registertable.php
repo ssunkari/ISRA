@@ -23,22 +23,29 @@ class RegisterTable {
         $this->dbh = $this->db->getDbh();
     }
 
-    public function Register($data) {
-        $sql = 'insert into isra_register (title,firstname,lastname,dob,street,state,city,email,preferred_countries,qualifications,mobile) 
-            values(:title,:firstname,:lastname,:dob,:street,:state,:city,:email,:preferred_countries,:qualifications,:mobile)';
+    public function Register($data,$preferred_countries) {
+        echo $preferred_countries;
+        echo $data['streetaddress'];
+        $sql = 'insert into isra_register(title,firstname,lastname,dob,street,state,city,email,preferred_countries,qualifications,mobile)
+            values(:title,:firstname,:lastname,:dob,:street,:state,:city,:email,:preferred_countries,:qualifications,:mobile)';   
         $results = $this->dbh->prepare($sql);
         $results->execute(array(':title' => $data['title'],
             ':firstname' => $data['firstname'],
             ':lastname' => $data['lastname'],
             ':dob' => $data['dob'],
-            ':street' => $data['street'],
+            ':street' => $data['streetaddress'],
             ':state' => $data['state'],
             ':city' => $data['city'],
-            ':email' => $data['email'],
-            ':preferred_countries' => $data['preferred_countries'],
+            ':email' => $data['emailid'],
+            ':preferred_countries' => $preferred_countries,
             ':qualifications' => $data['qualifications'],
-            ':mobile' => $data['mobile']
-        ));       
-        return "";
-    }  
+            ':mobile' => $data['mobileno']
+        ));
+    }
+         public function GetRegisteredData() {
+        $sql = 'select * from isra_register';
+        $results = $this->dbh->prepare($sql);
+        $results->execute();
+        return new Register($results->fetch());
+         }
 }

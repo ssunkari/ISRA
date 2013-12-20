@@ -4,14 +4,14 @@ class Database{
     protected $dbh;
     public static function getInstance()
     {
-        $username='root';
-        $password='';
-        $host='localhost';
-        $dbname='test';
-       /* $username='interb1w_root';
+//        $username='root';
+//        $password='';
+//        $host='localhost';
+//        $dbname='test';
+        $username='interb1w_root';
         $password='Rockst@r';
         $host='localhost';
-        $dbname='interb1w_isra';*/
+        $dbname='interb1w_isra';
         if(self::$instance===NULL)
         {
             self::$instance = new self($username,$password,$host,$dbname);
