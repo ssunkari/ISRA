@@ -24,8 +24,6 @@ class RegisterTable {
     }
 
     public function Register($data,$preferred_countries) {
-        echo $preferred_countries;
-        echo $data['streetaddress'];
         $sql = 'insert into isra_register(title,firstname,lastname,dob,street,state,city,email,preferred_countries,qualifications,mobile)
             values(:title,:firstname,:lastname,:dob,:street,:state,:city,:email,:preferred_countries,:qualifications,:mobile)';   
         $results = $this->dbh->prepare($sql);
